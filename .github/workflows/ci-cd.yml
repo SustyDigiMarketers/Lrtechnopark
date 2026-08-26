@@ -51,7 +51,7 @@ jobs:
           test -f dist/index.html || exit 1
           echo "Deployment bundle ready."
 
-      # Method 1: Deploy to 'gh-pages' branch (Works 100% reliably without requiring API site creation)
+      # Deploy cleanly to 'gh-pages' branch (Works 100% reliably without requiring GitHub Pages API enablement)
       - name: Deploy to gh-pages branch
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v4
@@ -61,23 +61,3 @@ jobs:
           cname: lrtechnopark.com
           keep_files: false
 
-      # Method 2: Upload GitHub Pages Artifact for Native Actions deployment
-      - name: Upload GitHub Pages Artifact
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
-
-  deploy-native-pages:
-    name: Deploy to GitHub Pages (Actions Mode)
-    needs: build-and-deploy
-    if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-    continue-on-error: true
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
