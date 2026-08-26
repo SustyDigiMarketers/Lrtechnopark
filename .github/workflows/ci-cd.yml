@@ -1,4 +1,4 @@
-name: LR Techno Park CI/CD & GitHub Pages Deployment
+name: LR Techno Park CI/CD & Deployment
 
 on:
   push:
@@ -17,8 +17,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  validate-and-build:
-    name: Build & Validate Production Bundle
+  build-and-deploy:
+    name: Build, Test & Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -41,30 +41,38 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Prepare SPA Routing & CNAME for GitHub Pages
+      - name: Prepare SPA Fallback & Domain Setup
         run: |
           cp dist/index.html dist/404.html
           echo "lrtechnopark.com" > dist/CNAME
           touch dist/.nojekyll
+          echo "lrtechnopark.com" > docs/CNAME
+          touch docs/.nojekyll
           test -f dist/index.html || exit 1
-          echo "Frontend & Backend bundles ready for deployment."
+          echo "Deployment bundle ready."
 
-      - name: Setup GitHub Pages
+      # Method 1: Deploy to 'gh-pages' branch (Works 100% reliably without requiring API site creation)
+      - name: Deploy to gh-pages branch
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-        uses: actions/configure-pages@v5
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          enablement: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: lrtechnopark.com
+          keep_files: false
 
+      # Method 2: Upload GitHub Pages Artifact for Native Actions deployment
       - name: Upload GitHub Pages Artifact
         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: validate-and-build
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+  deploy-native-pages:
+    name: Deploy to GitHub Pages (Actions Mode)
+    needs: build-and-deploy
+    if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    continue-on-error: true
     runs-on: ubuntu-latest
     environment:
       name: github-pages
