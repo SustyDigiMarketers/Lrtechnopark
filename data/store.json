@@ -1,0 +1,1002 @@
+{
+  "orderCounter": 112,
+  "serviceBookingCounter": 206,
+  "contactCounter": 303,
+  "orders": [
+    {
+      "id": "LRTP-2026-000112",
+      "createdAt": "2026-08-24T12:00:20.079Z",
+      "updatedAt": "2026-08-24T12:00:20.079Z",
+      "customerId": "cust-demo-ent-01",
+      "customerName": "Santhosh Kumar (Client Admin)",
+      "customerEmail": "client.procurement@enterprise.example",
+      "companyName": "Enterprise Technology Client",
+      "phone": "+91 98400 12345",
+      "gstin": "33AAACT9988P1Z8",
+      "billingAddress": "Plot 18, Innovation Corridor, Chennai, Tamil Nadu - 600032",
+      "shippingAddress": "Plot 18, Innovation Corridor, Chennai, Tamil Nadu - 600032",
+      "items": [
+        {
+          "productId": "hw-01",
+          "productName": "Enterprise Commercial Desktop PC",
+          "productCode": "LR-HW-DSK01",
+          "category": "Computer Hardware",
+          "brand": "LR Certified Enterprise",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 3,
+          "unitPrice": 68500,
+          "totalPrice": 205500,
+          "hsnCode": "8471",
+          "gstRate": 0.18,
+          "taxAmount": 36990,
+          "warrantyPeriod": "3 Years On-Site Comprehensive Hardware Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 205500,
+      "tax": 36990,
+      "total": 242490,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T12:00:20.079Z",
+          "note": "Order validated, itemized GST tax invoice breakdown computed, and committed to database.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-2026-AUTOTEST-01",
+      "syncedToGoogleSheets": false,
+      "sheetsSyncStatus": "PENDING",
+      "dispatchTrackingNumber": "BDT-500872735-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000112-2029",
+      "gstBreakdown": {
+        "sacCode": "8471",
+        "cgstRate": 0.09,
+        "cgstAmount": 18495,
+        "sgstRate": 0.09,
+        "sgstAmount": 18495,
+        "igstRate": 0,
+        "igstAmount": 0,
+        "isInterState": false,
+        "isB2B": true,
+        "customerGstin": "33AAACT9988P1Z8",
+        "itemizedSummary": [
+          {
+            "productName": "Enterprise Commercial Desktop PC",
+            "hsnCode": "8471",
+            "taxableAmount": 205500,
+            "gstRate": 0.18,
+            "taxAmount": 36990
+          }
+        ]
+      },
+      "sheetsSyncError": "GOOGLE_APPS_SCRIPT_URL not configured"
+    },
+    {
+      "id": "LRTP-2026-000111",
+      "createdAt": "2026-08-24T12:00:00.123Z",
+      "updatedAt": "2026-08-24T12:00:00.123Z",
+      "customerId": "cust-a35e54f0",
+      "customerName": "Regression Test Agent",
+      "customerEmail": "test.procurement@example.com",
+      "companyName": "Test Infra Ltd",
+      "phone": "+91 98765 43210",
+      "gstin": "29ABCDE1234F1Z5",
+      "billingAddress": "Building 4B, Cyber Gateway, Bangalore, Karnataka - 560001",
+      "shippingAddress": "Building 4B, Cyber Gateway, Bangalore, Karnataka - 560001",
+      "items": [
+        {
+          "productId": "hw-01",
+          "productName": "Enterprise Commercial Desktop PC",
+          "productCode": "LR-HW-DSK01",
+          "category": "Computer Hardware",
+          "brand": "LR Certified Enterprise",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 2,
+          "unitPrice": 68500,
+          "totalPrice": 137000,
+          "hsnCode": "8471",
+          "gstRate": 0.18,
+          "taxAmount": 24660,
+          "warrantyPeriod": "3 Years On-Site Comprehensive Hardware Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 137000,
+      "tax": 24660,
+      "total": 161660,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T12:00:00.123Z",
+          "note": "Order validated, itemized GST tax invoice breakdown computed, and committed to database.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-2026-TEST-99",
+      "syncedToGoogleSheets": false,
+      "sheetsSyncStatus": "PENDING",
+      "dispatchTrackingNumber": "BDT-189684230-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000111-2029",
+      "gstBreakdown": {
+        "sacCode": "8471",
+        "cgstRate": 0,
+        "cgstAmount": 0,
+        "sgstRate": 0,
+        "sgstAmount": 0,
+        "igstRate": 0.18,
+        "igstAmount": 24660,
+        "isInterState": true,
+        "isB2B": true,
+        "customerGstin": "29ABCDE1234F1Z5",
+        "itemizedSummary": [
+          {
+            "productName": "Enterprise Commercial Desktop PC",
+            "hsnCode": "8471",
+            "taxableAmount": 137000,
+            "gstRate": 0.18,
+            "taxAmount": 24660
+          }
+        ]
+      },
+      "sheetsSyncError": "GOOGLE_APPS_SCRIPT_URL not configured"
+    },
+    {
+      "id": "LRTP-2026-000110",
+      "createdAt": "2026-08-24T06:16:56.354Z",
+      "updatedAt": "2026-08-24T06:16:56.354Z",
+      "customerId": "cust-demo-ent-01",
+      "customerName": "Santhosh Kumar",
+      "customerEmail": "client.procurement@enterprise.example",
+      "companyName": "Enterprise Technology Client",
+      "phone": "+91 98400 12345",
+      "gstin": "33AAACT9988P1Z8",
+      "billingAddress": "Olympia Tech Park, Chennai",
+      "shippingAddress": "Olympia Tech Park, Chennai",
+      "items": [
+        {
+          "productId": "cctv-01",
+          "productName": "4K Ultra HD AI Smart IP Dome Camera",
+          "productCode": "LR-CAM-DOME01",
+          "category": "CCTV Cameras",
+          "brand": "LR Vision Security",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 2,
+          "unitPrice": 9800,
+          "totalPrice": 19600,
+          "hsnCode": "8525",
+          "gstRate": 0.18,
+          "taxAmount": 3528,
+          "warrantyPeriod": "2 Years Manufacturer Replacement Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 19600,
+      "tax": 3528,
+      "total": 23128,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T06:16:56.354Z",
+          "note": "Order validated, itemized GST tax invoice breakdown computed, and committed to database.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-000110",
+      "syncedToGoogleSheets": false,
+      "sheetsSyncStatus": "PENDING",
+      "dispatchTrackingNumber": "BDT-890061839-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000110-2029",
+      "gstBreakdown": {
+        "sacCode": "8525",
+        "cgstRate": 0.09,
+        "cgstAmount": 1764,
+        "sgstRate": 0.09,
+        "sgstAmount": 1764,
+        "igstRate": 0,
+        "igstAmount": 0,
+        "isInterState": false,
+        "isB2B": true,
+        "customerGstin": "33AAACT9988P1Z8",
+        "itemizedSummary": [
+          {
+            "productName": "4K Ultra HD AI Smart IP Dome Camera",
+            "hsnCode": "8525",
+            "taxableAmount": 19600,
+            "gstRate": 0.18,
+            "taxAmount": 3528
+          }
+        ]
+      },
+      "sheetsSyncError": "GOOGLE_APPS_SCRIPT_URL not configured"
+    },
+    {
+      "id": "LRTP-2026-000109",
+      "createdAt": "2026-08-24T06:13:36.201Z",
+      "updatedAt": "2026-08-24T06:13:36.201Z",
+      "customerId": "cust-demo-ent-01",
+      "customerName": "Rajesh V",
+      "customerEmail": "purchasing@apexsolutions.example",
+      "companyName": "Apex Solutions Private Limited",
+      "phone": "+91 98400 12345",
+      "gstin": "29ABCDE1234F1Z5",
+      "billingAddress": "Koramangala, Bengaluru, Karnataka",
+      "shippingAddress": "Koramangala, Bengaluru, Karnataka",
+      "items": [
+        {
+          "productId": "net-01",
+          "productName": "24-Port Gigabit L2+ Managed PoE+ Switch",
+          "productCode": "LR-NET-SW24P",
+          "category": "Networking Hardware",
+          "brand": "LR Core Networks",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 1,
+          "unitPrice": 34500,
+          "totalPrice": 34500,
+          "hsnCode": "8517",
+          "gstRate": 0.18,
+          "taxAmount": 6210,
+          "warrantyPeriod": "5 Years Limited Lifetime Enterprise Hardware Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 34500,
+      "tax": 6210,
+      "total": 40710,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T06:13:36.201Z",
+          "note": "Order validated, itemized GST tax invoice breakdown computed, and committed to database.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-000109",
+      "syncedToGoogleSheets": false,
+      "sheetsSyncStatus": "PENDING",
+      "dispatchTrackingNumber": "BDT-194627252-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000109-2029",
+      "gstBreakdown": {
+        "sacCode": "8517",
+        "cgstRate": 0,
+        "cgstAmount": 0,
+        "sgstRate": 0,
+        "sgstAmount": 0,
+        "igstRate": 0.18,
+        "igstAmount": 6210,
+        "isInterState": true,
+        "isB2B": true,
+        "customerGstin": "29ABCDE1234F1Z5",
+        "itemizedSummary": [
+          {
+            "productName": "24-Port Gigabit L2+ Managed PoE+ Switch",
+            "hsnCode": "8517",
+            "taxableAmount": 34500,
+            "gstRate": 0.18,
+            "taxAmount": 6210
+          }
+        ]
+      },
+      "sheetsSyncError": "GOOGLE_APPS_SCRIPT_URL not configured"
+    },
+    {
+      "id": "LRTP-2026-000108",
+      "createdAt": "2026-08-24T06:13:36.171Z",
+      "updatedAt": "2026-08-24T06:13:36.171Z",
+      "customerId": "cust-demo-ent-01",
+      "customerName": "Santhosh Kumar",
+      "customerEmail": "client.procurement@enterprise.example",
+      "companyName": "Enterprise Technology Client",
+      "phone": "+91 98400 12345",
+      "gstin": "33AAACT9988P1Z8",
+      "billingAddress": "Guindy, Chennai, Tamil Nadu",
+      "shippingAddress": "Guindy, Chennai, Tamil Nadu",
+      "items": [
+        {
+          "productId": "hw-01",
+          "productName": "Enterprise Commercial Desktop PC",
+          "productCode": "LR-HW-DSK01",
+          "category": "Computer Hardware",
+          "brand": "LR Certified Enterprise",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 2,
+          "unitPrice": 68500,
+          "totalPrice": 137000,
+          "hsnCode": "8471",
+          "gstRate": 0.18,
+          "taxAmount": 24660,
+          "warrantyPeriod": "3 Years On-Site Comprehensive Hardware Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 137000,
+      "tax": 24660,
+      "total": 161660,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T06:13:36.171Z",
+          "note": "Order validated, itemized GST tax invoice breakdown computed, and committed to database.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-000108",
+      "syncedToGoogleSheets": false,
+      "sheetsSyncStatus": "PENDING",
+      "dispatchTrackingNumber": "BDT-302200991-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000108-2029",
+      "gstBreakdown": {
+        "sacCode": "8471",
+        "cgstRate": 0.09,
+        "cgstAmount": 12330,
+        "sgstRate": 0.09,
+        "sgstAmount": 12330,
+        "igstRate": 0,
+        "igstAmount": 0,
+        "isInterState": false,
+        "isB2B": true,
+        "customerGstin": "33AAACT9988P1Z8",
+        "itemizedSummary": [
+          {
+            "productName": "Enterprise Commercial Desktop PC",
+            "hsnCode": "8471",
+            "taxableAmount": 137000,
+            "gstRate": 0.18,
+            "taxAmount": 24660
+          }
+        ]
+      },
+      "sheetsSyncError": "GOOGLE_APPS_SCRIPT_URL not configured"
+    },
+    {
+      "id": "LRTP-2026-000107",
+      "createdAt": "2026-08-24T06:12:58.443Z",
+      "updatedAt": "2026-08-24T06:12:58.443Z",
+      "customerId": "cust-019ce3fb",
+      "customerName": "Rajesh V",
+      "customerEmail": "purchasing@apexsolutions.example",
+      "companyName": "Apex Solutions Private Limited",
+      "phone": "+91 98400 12345",
+      "gstin": "29ABCDE1234F1Z5",
+      "billingAddress": "Koramangala, Bengaluru, Karnataka",
+      "shippingAddress": "Koramangala, Bengaluru, Karnataka",
+      "items": [
+        {
+          "productId": "net-01",
+          "productName": "24-Port Gigabit L2+ Managed PoE+ Switch",
+          "productCode": "LR-NET-SW24P",
+          "category": "Networking Hardware",
+          "brand": "LR Core Networks",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 1,
+          "unitPrice": 34500,
+          "totalPrice": 34500,
+          "hsnCode": "8517",
+          "gstRate": 0.18,
+          "taxAmount": 6210,
+          "warrantyPeriod": "5 Years Limited Lifetime Enterprise Hardware Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 34500,
+      "tax": 6210,
+      "total": 40710,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T06:12:58.443Z",
+          "note": "Order validated, itemized GST tax invoice breakdown computed, and committed to database.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-000107",
+      "syncedToGoogleSheets": false,
+      "sheetsSyncStatus": "PENDING",
+      "dispatchTrackingNumber": "BDT-485286627-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000107-2029",
+      "gstBreakdown": {
+        "sacCode": "8517",
+        "cgstRate": 0,
+        "cgstAmount": 0,
+        "sgstRate": 0,
+        "sgstAmount": 0,
+        "igstRate": 0.18,
+        "igstAmount": 6210,
+        "isInterState": true,
+        "isB2B": true,
+        "customerGstin": "29ABCDE1234F1Z5",
+        "itemizedSummary": [
+          {
+            "productName": "24-Port Gigabit L2+ Managed PoE+ Switch",
+            "hsnCode": "8517",
+            "taxableAmount": 34500,
+            "gstRate": 0.18,
+            "taxAmount": 6210
+          }
+        ]
+      },
+      "sheetsSyncError": "GOOGLE_APPS_SCRIPT_URL not configured"
+    },
+    {
+      "id": "LRTP-2026-000106",
+      "createdAt": "2026-08-24T06:12:58.415Z",
+      "updatedAt": "2026-08-24T06:12:58.415Z",
+      "customerId": "cust-d13f1875",
+      "customerName": "Santhosh Kumar",
+      "customerEmail": "client.procurement@enterprise.example",
+      "companyName": "Enterprise Technology Client",
+      "phone": "+91 98400 12345",
+      "gstin": "33AAACT9988P1Z8",
+      "billingAddress": "Guindy, Chennai, Tamil Nadu",
+      "shippingAddress": "Guindy, Chennai, Tamil Nadu",
+      "items": [
+        {
+          "productId": "hw-01",
+          "productName": "Enterprise Commercial Desktop PC",
+          "productCode": "LR-HW-DSK01",
+          "category": "Computer Hardware",
+          "brand": "LR Certified Enterprise",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 2,
+          "unitPrice": 68500,
+          "totalPrice": 137000,
+          "hsnCode": "8471",
+          "gstRate": 0.18,
+          "taxAmount": 24660,
+          "warrantyPeriod": "3 Years On-Site Comprehensive Hardware Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 137000,
+      "tax": 24660,
+      "total": 161660,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T06:12:58.415Z",
+          "note": "Order validated, itemized GST tax invoice breakdown computed, and committed to database.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-000106",
+      "syncedToGoogleSheets": false,
+      "sheetsSyncStatus": "PENDING",
+      "dispatchTrackingNumber": "BDT-773700360-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000106-2029",
+      "gstBreakdown": {
+        "sacCode": "8471",
+        "cgstRate": 0.09,
+        "cgstAmount": 12330,
+        "sgstRate": 0.09,
+        "sgstAmount": 12330,
+        "igstRate": 0,
+        "igstAmount": 0,
+        "isInterState": false,
+        "isB2B": true,
+        "customerGstin": "33AAACT9988P1Z8",
+        "itemizedSummary": [
+          {
+            "productName": "Enterprise Commercial Desktop PC",
+            "hsnCode": "8471",
+            "taxableAmount": 137000,
+            "gstRate": 0.18,
+            "taxAmount": 24660
+          }
+        ]
+      },
+      "sheetsSyncError": "GOOGLE_APPS_SCRIPT_URL not configured"
+    },
+    {
+      "id": "LRTP-2026-000105",
+      "createdAt": "2026-08-24T06:08:09.512Z",
+      "updatedAt": "2026-08-24T06:08:09.512Z",
+      "customerId": "cust-da4da9fe",
+      "customerName": "Santhosh Kumar",
+      "customerEmail": "client.procurement@enterprise.example",
+      "companyName": "Enterprise Technology Client",
+      "phone": "+91 98400 12345",
+      "gstin": "33AAACT9988P1Z8",
+      "billingAddress": "Guindy, Chennai, Tamil Nadu",
+      "shippingAddress": "Guindy, Chennai, Tamil Nadu",
+      "items": [
+        {
+          "productId": "hw-01",
+          "productName": "Enterprise Commercial Desktop PC",
+          "productCode": "LR-HW-DSK01",
+          "category": "Computer Hardware",
+          "brand": "LR Certified Enterprise",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 2,
+          "unitPrice": 68500,
+          "totalPrice": 137000,
+          "hsnCode": "8471",
+          "warrantyPeriod": "3 Years On-Site Comprehensive Hardware Warranty",
+          "configurationNotes": ""
+        }
+      ],
+      "subtotal": 137000,
+      "tax": 24660,
+      "total": 161660,
+      "currency": "INR",
+      "status": "SUBMITTED",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-24T06:08:09.512Z",
+          "note": "Order validated, 18% GST invoice prepared, and logged into staging queue.",
+          "actor": "LR Core Order API"
+        }
+      ],
+      "notes": "",
+      "purchaseOrderNumber": "PO-000105",
+      "syncedToGoogleSheets": false,
+      "dispatchTrackingNumber": "BDT-658906646-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000105-2029",
+      "gstBreakdown": {
+        "sacCode": "8471",
+        "cgstRate": 0.09,
+        "cgstAmount": 12330,
+        "sgstRate": 0.09,
+        "sgstAmount": 12330,
+        "igstRate": 0,
+        "igstAmount": 0,
+        "isInterState": false
+      }
+    },
+    {
+      "id": "LRTP-2026-000101",
+      "createdAt": "2026-08-20T06:08:04.837Z",
+      "updatedAt": "2026-08-24T06:13:36.153Z",
+      "customerId": "cust-demo-ent-01",
+      "customerName": "Santhosh Kumar (Client Admin)",
+      "customerEmail": "client.procurement@enterprise.example",
+      "companyName": "Enterprise Technology Client",
+      "phone": "+91 98400 12345",
+      "gstin": "33AAACT9988P1Z8",
+      "billingAddress": "Plot 18, Innovation Corridor, Chennai, Tamil Nadu - 600032",
+      "shippingAddress": "Plot 18, Innovation Corridor, Chennai, Tamil Nadu - 600032",
+      "items": [
+        {
+          "productId": "net-01",
+          "productName": "24-Port Gigabit Managed L3 PoE+ Switch",
+          "productCode": "LR-NET-SW24P",
+          "category": "Networking Hardware",
+          "brand": "LR Network Systems",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 2,
+          "unitPrice": 42500,
+          "totalPrice": 85000,
+          "hsnCode": "8517",
+          "warrantyPeriod": "3-Year On-Site NBD Replacement",
+          "configurationNotes": "Pre-configured VLAN 10 (Data) & VLAN 20 (CCTV PoE)"
+        },
+        {
+          "productId": "cctv-01",
+          "productName": "4K Ultra HD AI Smart IP Dome Camera",
+          "productCode": "LR-CAM-DOME01",
+          "category": "CCTV Cameras",
+          "brand": "LR Vision Security",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 6,
+          "unitPrice": 11200,
+          "totalPrice": 67200,
+          "hsnCode": "8525",
+          "warrantyPeriod": "3-Year On-Site NBD Replacement",
+          "configurationNotes": "2.8mm wide angle lenses"
+        }
+      ],
+      "subtotal": 152200,
+      "tax": 27396,
+      "total": 179596,
+      "currency": "INR",
+      "status": "PROCESSING",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-20T06:08:04.838Z",
+          "note": "Order submitted with verified customer credentials and 18% GST calculation.",
+          "actor": "Client Procurement Desk"
+        },
+        {
+          "status": "APPROVED",
+          "timestamp": "2026-08-21T06:08:04.838Z",
+          "note": "BOM validated, GST invoice generated, hardware reserved at Guindy fulfillment center.",
+          "actor": "Finance & Compliance Desk"
+        },
+        {
+          "status": "COMPLETED",
+          "timestamp": "2026-08-23T06:08:04.838Z",
+          "note": "Hardware staged, 24hr burn-in passed, dispatched via Blue Dart Apex with tracking ID.",
+          "actor": "Logistics Operations Hub"
+        },
+        {
+          "status": "PROCESSING",
+          "timestamp": "2026-08-24T06:08:09.504Z",
+          "note": "Validated by ops",
+          "actor": "LR Operations Desk"
+        },
+        {
+          "status": "PROCESSING",
+          "timestamp": "2026-08-24T06:13:36.153Z",
+          "note": "Hardening verified",
+          "actor": "LR Operations Desk"
+        }
+      ],
+      "notes": "Reference deployment configuration. HSN: 8517 / 8525.",
+      "purchaseOrderNumber": "PO-REF-2026-901",
+      "syncedToGoogleSheets": true,
+      "sheetsSyncTimestamp": "2026-08-20T06:08:04.838Z",
+      "assignedSalesEngineer": "LR Solutions Engineering",
+      "dispatchTrackingNumber": "BDT-883920194-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000101-2029",
+      "gstBreakdown": {
+        "sacCode": "8517",
+        "cgstRate": 0.09,
+        "cgstAmount": 13698,
+        "sgstRate": 0.09,
+        "sgstAmount": 13698,
+        "igstRate": 0,
+        "igstAmount": 0,
+        "isInterState": false
+      }
+    },
+    {
+      "id": "LRTP-2026-000102",
+      "createdAt": "2026-08-22T06:08:04.838Z",
+      "updatedAt": "2026-08-23T06:08:04.838Z",
+      "customerId": "cust-demo-ent-02",
+      "customerName": "Rajesh V (Apex Procurement)",
+      "customerEmail": "purchasing@apexsolutions.example",
+      "companyName": "Apex Solutions Private Limited",
+      "phone": "+91 98401 54321",
+      "gstin": "29ABCDE1234F1Z5",
+      "billingAddress": "4th Block, Koramangala, Bengaluru, Karnataka - 560034",
+      "shippingAddress": "4th Block, Koramangala, Bengaluru, Karnataka - 560034",
+      "items": [
+        {
+          "productId": "hw-01",
+          "productName": "Enterprise Commercial Desktop PC",
+          "productCode": "LR-HW-DSK01",
+          "category": "Computer Hardware",
+          "brand": "LR Certified Enterprise",
+          "licenseType": "ANNUAL",
+          "deploymentTier": "STANDARD_DELIVERY",
+          "quantity": 5,
+          "unitPrice": 62900,
+          "totalPrice": 314500,
+          "hsnCode": "8471",
+          "warrantyPeriod": "3-Year On-Site Comprehensive Hardware Warranty",
+          "configurationNotes": "Pre-load Windows 11 Pro 64-bit with asset tagging"
+        }
+      ],
+      "subtotal": 314500,
+      "tax": 56610,
+      "total": 371110,
+      "currency": "INR",
+      "status": "PROCESSING",
+      "timeline": [
+        {
+          "status": "SUBMITTED",
+          "timestamp": "2026-08-22T06:08:04.838Z",
+          "note": "Order submitted for 5 units with IGST 18% inter-state tax schedule.",
+          "actor": "Client Procurement"
+        },
+        {
+          "status": "PROCESSING",
+          "timestamp": "2026-08-23T06:08:04.838Z",
+          "note": "Hardware units in memory burn-in test rack.",
+          "actor": "Staging Engineers"
+        }
+      ],
+      "purchaseOrderNumber": "PO-APX-8819",
+      "syncedToGoogleSheets": true,
+      "sheetsSyncTimestamp": "2026-08-22T06:08:04.838Z",
+      "dispatchTrackingNumber": "BDT-441920831-IN",
+      "courierPartner": "Blue Dart Apex Express",
+      "warrantyCertificateId": "LRTP-WRN-2026000102-2029",
+      "gstBreakdown": {
+        "sacCode": "8471",
+        "cgstRate": 0,
+        "cgstAmount": 0,
+        "sgstRate": 0,
+        "sgstAmount": 0,
+        "igstRate": 0.18,
+        "igstAmount": 56610,
+        "isInterState": true
+      }
+    }
+  ],
+  "serviceBookings": [
+    {
+      "id": "srv-book-1787572820142",
+      "bookingId": "LRTP-SVC-2026-000206",
+      "dateSubmitted": "2026-08-24T12:00:20.142Z",
+      "customerName": "Infrastructure Lead",
+      "company": "Enterprise Technology Client",
+      "email": "client.procurement@enterprise.example",
+      "phone": "+91 98400 12345",
+      "service": "WiFi & Hotspot Solutions",
+      "preferredDate": "2026-09-15",
+      "preferredTime": "Morning (10:00 AM - 1:00 PM)",
+      "location": "Chennai Tech Campus",
+      "requirements": "Professional deployment assessment for WiFi & Hotspot Solutions",
+      "bookingStatus": "CONFIRMED",
+      "syncedToGoogleSheets": false
+    },
+    {
+      "id": "srv-book-1787572820123",
+      "bookingId": "LRTP-SVC-2026-000205",
+      "dateSubmitted": "2026-08-24T12:00:20.123Z",
+      "customerName": "Infrastructure Lead",
+      "company": "Enterprise Technology Client",
+      "email": "client.procurement@enterprise.example",
+      "phone": "+91 98400 12345",
+      "service": "CCTV Cameras & Surveillance Systems",
+      "preferredDate": "2026-09-15",
+      "preferredTime": "Morning (10:00 AM - 1:00 PM)",
+      "location": "Chennai Tech Campus",
+      "requirements": "Professional deployment assessment for CCTV Cameras & Surveillance Systems",
+      "bookingStatus": "CONFIRMED",
+      "syncedToGoogleSheets": false
+    },
+    {
+      "id": "srv-book-1787572820117",
+      "bookingId": "LRTP-SVC-2026-000204",
+      "dateSubmitted": "2026-08-24T12:00:20.117Z",
+      "customerName": "Infrastructure Lead",
+      "company": "Enterprise Technology Client",
+      "email": "client.procurement@enterprise.example",
+      "phone": "+91 98400 12345",
+      "service": "Networking & Infrastructure",
+      "preferredDate": "2026-09-15",
+      "preferredTime": "Morning (10:00 AM - 1:00 PM)",
+      "location": "Chennai Tech Campus",
+      "requirements": "Professional deployment assessment for Networking & Infrastructure",
+      "bookingStatus": "CONFIRMED",
+      "syncedToGoogleSheets": false
+    },
+    {
+      "id": "srv-book-1787572820110",
+      "bookingId": "LRTP-SVC-2026-000203",
+      "dateSubmitted": "2026-08-24T12:00:20.109Z",
+      "customerName": "Infrastructure Lead",
+      "company": "Enterprise Technology Client",
+      "email": "client.procurement@enterprise.example",
+      "phone": "+91 98400 12345",
+      "service": "Firewall & Network Security",
+      "preferredDate": "2026-09-15",
+      "preferredTime": "Morning (10:00 AM - 1:00 PM)",
+      "location": "Chennai Tech Campus",
+      "requirements": "Professional deployment assessment for Firewall & Network Security",
+      "bookingStatus": "CONFIRMED",
+      "syncedToGoogleSheets": false
+    },
+    {
+      "id": "srv-book-1787552216532",
+      "bookingId": "LRTP-SVC-2026-000202",
+      "dateSubmitted": "2026-08-24T06:16:56.532Z",
+      "customerName": "Santhosh Kumar",
+      "company": "Enterprise Technology Client",
+      "email": "client.procurement@enterprise.example",
+      "phone": "+91 98400 12345",
+      "service": "Firewall & Network Security Deployment",
+      "preferredDate": "2026-09-15",
+      "preferredTime": "Flexible / Morning",
+      "location": "Olympia Tech Park, Guindy, Chennai",
+      "requirements": "HA Pair NGFW Deployment",
+      "bookingStatus": "CONFIRMED",
+      "syncedToGoogleSheets": false
+    },
+    {
+      "id": "srv-book-01",
+      "bookingId": "LRTP-SVC-2026-000201",
+      "dateSubmitted": "2026-08-22T06:08:04.838Z",
+      "customerName": "Marcus Vance",
+      "company": "Apex Logistics & Warehousing Ltd",
+      "email": "m.vance@apexlogistics.example",
+      "phone": "+91 98400 43899",
+      "service": "Firewall & Network Security",
+      "preferredDate": "2026-09-15",
+      "preferredTime": "10:00 AM - 01:00 PM",
+      "location": "Building 4, Industrial Logistics Corridor, Chennai",
+      "requirements": "Deploy and configure dual FortiGate 100F HA cluster, configure IPSec VPN for 4 remote branch warehouses, and set up deep packet inspection for 250 users.",
+      "bookingStatus": "CONFIRMED",
+      "syncedToGoogleSheets": true,
+      "sheetsSyncTimestamp": "2026-08-22T06:08:04.838Z"
+    }
+  ],
+  "contactSubmissions": [
+    {
+      "id": "cnt-1787572820149",
+      "enquiryId": "LRTP-CON-2026-000303",
+      "name": "Santhosh Kumar",
+      "email": "client.procurement@enterprise.example",
+      "phone": "+91 98400 12345",
+      "company": "Enterprise Technology Client",
+      "subject": "Enterprise Multi-Site SD-WAN and Managed Infrastructure RFP",
+      "serviceInterest": "Managed Firewall & Cybersecurity",
+      "estimatedBudget": "₹10,00,000+",
+      "message": "Seeking end-to-end SLA for 24/7 managed firewall operations and multi-site branch VPN connectivity.",
+      "source": "Website Contact Page",
+      "status": "SUBMITTED",
+      "createdAt": "2026-08-24T12:00:20.148Z",
+      "syncedToGoogleSheets": false
+    },
+    {
+      "id": "cnt-1787552216708",
+      "enquiryId": "LRTP-CON-2026-000302",
+      "name": "Santhosh Kumar",
+      "email": "client.procurement@enterprise.example",
+      "phone": "+91 98400 12345",
+      "company": "Enterprise Technology Client",
+      "subject": "Data Center Interconnect & Fiber Setup",
+      "serviceInterest": "Structured Cabling",
+      "estimatedBudget": "Not Specified",
+      "message": "Requesting detailed site inspection and RFP submission.",
+      "source": "Website Contact Page",
+      "status": "SUBMITTED",
+      "createdAt": "2026-08-24T06:16:56.708Z",
+      "syncedToGoogleSheets": false
+    },
+    {
+      "id": "cnt-01",
+      "enquiryId": "LRTP-CON-2026-000301",
+      "name": "Vikram Sundaram",
+      "email": "vikram.s@chennaitechenterprise.example",
+      "phone": "+91 98400 12345",
+      "company": "Chennai Tech Enterprise Solutions",
+      "subject": "Campus Structured Cabling & 42U Server Rack Setup",
+      "serviceInterest": "Networking & Infrastructure",
+      "estimatedBudget": "₹2,50,000 - ₹5,00,000",
+      "message": "We are expanding to a 3rd floor (8,000 sq.ft) and need Cat6A structured cabling for 80 workstations, 2 server racks dressed, and Fluke certification test reports.",
+      "source": "Website Contact Page",
+      "status": "CONTACTED",
+      "createdAt": "2026-08-21T06:08:04.838Z",
+      "syncedToGoogleSheets": true
+    }
+  ],
+  "supportTickets": [
+    {
+      "id": "tkt-01",
+      "ticketNumber": "TKT-2026-801",
+      "customerId": "cust-demo-ent-01",
+      "customerEmail": "client.procurement@enterprise.example",
+      "companyName": "Enterprise Technology Client",
+      "subject": "VLAN 20 CCTV PoE Switch Port Routing & Isolation",
+      "category": "Deployment & Infrastructure",
+      "priority": "HIGH_P2",
+      "description": "Assistance requested on configuring multipath VLAN routing for newly connected 4K IP dome cameras.",
+      "status": "IN_PROGRESS",
+      "createdAt": "2026-08-23T06:08:04.838Z",
+      "assignedTeam": "Network Systems Engineering Desk"
+    }
+  ],
+  "users": [
+    {
+      "uid": "cust-demo-ent-01",
+      "id": "cust-demo-ent-01",
+      "email": "client.procurement@enterprise.example",
+      "displayName": "Santhosh Kumar (Client Admin)",
+      "company": "Enterprise Technology Client",
+      "role": "customer",
+      "phone": "+91 98400 12345",
+      "gstin": "33AAACT9988P1Z8",
+      "billingAddress": "Plot 18, Innovation Corridor, Chennai, Tamil Nadu - 600032",
+      "activeLicensesCount": 10,
+      "createdDate": "2025-01-10",
+      "passwordHash": "0f451e378f6b20b1465da164036b3b2d046bedaf29acd6fb9d81ae83b7ade239038d3709e8568e8afd1c741dab29d28ddc31ab617ce18e513eea036a3ffe7b98",
+      "salt": "demo_salt_customer_01_secure_2026"
+    },
+    {
+      "uid": "cust-demo-ent-02",
+      "id": "cust-demo-ent-02",
+      "email": "purchasing@apexsolutions.example",
+      "displayName": "Rajesh V (Apex Procurement)",
+      "company": "Apex Solutions Private Limited",
+      "role": "customer",
+      "phone": "+91 98401 54321",
+      "gstin": "29ABCDE1234F1Z5",
+      "billingAddress": "4th Block, Koramangala, Bengaluru, Karnataka - 560034",
+      "activeLicensesCount": 4,
+      "createdDate": "2025-02-15",
+      "passwordHash": "dfaa22a0c94715fc57472bee72276e2e5dc0d9292c78d09b5d1be2cd7fbc64fed35e0d7507e596f20d42c0cc54f12d597bfbbed8e140c5ea2e99f338c86d755e",
+      "salt": "demo_salt_customer_02_secure_2026"
+    },
+    {
+      "uid": "staff-sales-01",
+      "id": "staff-sales-01",
+      "email": "sales.engineer@lrtechnopark.com",
+      "displayName": "Sales Solutions Architect",
+      "company": "LR Techno Park Commercial Operations",
+      "role": "sales",
+      "phone": "+91 98400 55555",
+      "activeLicensesCount": 45,
+      "createdDate": "2024-06-01",
+      "passwordHash": "8079b0c9bf0b47973f7151bbbc01f55d71efb4d069f166c72f79d85a6e59e586c05754d9a081b3a17d476dce6f8e75c72ae9de4455dae770b04ea17027db8270",
+      "salt": "demo_salt_sales_01_secure_2026"
+    },
+    {
+      "uid": "staff-support-01",
+      "id": "staff-support-01",
+      "email": "support.lead@lrtechnopark.com",
+      "displayName": "NOC & Security Operations Desk",
+      "company": "LR Techno Park Support Center",
+      "role": "support",
+      "phone": "+91 98400 66666",
+      "activeLicensesCount": 0,
+      "createdDate": "2024-03-15",
+      "passwordHash": "becd871b20534bd76b94274705332953c6ff8c3f2ec97631db22d6fa1ce0fead5c5114f94be5c820e8d90ebce0c2943174dd525475d89f661ee5de347a897707",
+      "salt": "demo_salt_support_01_secure_2026"
+    },
+    {
+      "uid": "staff-admin-01",
+      "id": "staff-admin-01",
+      "email": "operations.admin@lrtechnopark.com",
+      "displayName": "Operations & Dispatch Manager",
+      "company": "LR Techno Park Operations HQ",
+      "role": "admin",
+      "phone": "+91 98400 77777",
+      "gstin": "33AAACL8890K1ZV",
+      "billingAddress": "Olympia Tech Park, Guindy, Chennai - 600032",
+      "activeLicensesCount": 120,
+      "createdDate": "2023-01-01",
+      "passwordHash": "7fccefc136f689d212bae3fb4214d46554886a77d862243d1288de9ceecf036f28936ab286d19fe3e854ca0bed3b6777ae9f1af53e5179d4cad030f6192b215f",
+      "salt": "demo_salt_admin_01_secure_2026"
+    },
+    {
+      "uid": "staff-superadmin-01",
+      "id": "staff-superadmin-01",
+      "email": "ciso.director@lrtechnopark.com",
+      "displayName": "Executive Systems Director (Superadmin)",
+      "company": "LR Techno Park Governance Directorate",
+      "role": "superadmin",
+      "phone": "+91 98400 88888",
+      "gstin": "33AAACL8890K1ZV",
+      "billingAddress": "Olympia Tech Park, Guindy, Chennai - 600032",
+      "activeLicensesCount": 350,
+      "createdDate": "2022-01-01",
+      "passwordHash": "553277288b8f54c11b78ea3658d9d8eef74be2317fa5ca1cd2ec2427b6709b36092c525375a8667b47db8bafbc11d7741680b25ca740daa26642c39279802372",
+      "salt": "demo_salt_superadmin_01_secure_2026"
+    }
+  ]
+}
