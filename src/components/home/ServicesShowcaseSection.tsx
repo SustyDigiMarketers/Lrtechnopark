@@ -10,7 +10,6 @@ import {
   Calendar
 } from 'lucide-react';
 import { SectionHeader } from '../ui/SectionHeader';
-import { TechBadge } from '../ui/TechBadge';
 import { StaggerContainer, StaggerItem } from '../motion/StaggerContainer';
 
 interface ServicesShowcaseSectionProps {
@@ -53,7 +52,7 @@ export const ServicesShowcaseSection: React.FC<ServicesShowcaseSectionProps> = (
   onOpenContactWithService
 }) => {
   return (
-    <section className="py-24 sm:py-32 bg-[#05070a] border-t border-slate-800 relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-[#050607] border-t border-slate-800/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <SectionHeader
@@ -62,7 +61,7 @@ export const ServicesShowcaseSection: React.FC<ServicesShowcaseSectionProps> = (
           title="Infrastructure Services."
           highlightText=""
           description="End-to-end IT deployment, network engineering, and 24/7 technical maintenance for modern commercial facilities."
-          className="mb-16"
+          className="mb-14"
         />
 
         {/* 4 Clean High-Impact Service Cards */}
@@ -77,56 +76,55 @@ export const ServicesShowcaseSection: React.FC<ServicesShowcaseSectionProps> = (
 
             return (
               <StaggerItem key={srv.id}>
-                <div className="p-7 rounded-3xl bg-[#0d1322] border border-slate-800 hover:border-amber-500/50 hover:bg-[#0f172a] transition-all duration-300 flex flex-col justify-between h-full shadow-xl hover:shadow-2xl group">
+                <div className="p-6 sm:p-7 rounded-3xl bg-[#0b0e12] border border-slate-800/90 hover:border-[#f4b72d]/50 hover:bg-[#11161b] transition-all duration-300 flex flex-col justify-between h-full shadow-xl hover:shadow-2xl group">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform shadow-xs">
+                      <div className="w-12 h-12 rounded-2xl bg-[#11161b] border border-slate-700/60 flex items-center justify-center text-[#f4b72d] group-hover:scale-105 transition-transform shadow-xs">
                         <IconComponent className="w-6 h-6" />
                       </div>
-                      <TechBadge variant="blue" size="sm">
+                      <span className="px-2.5 py-1 rounded-full bg-[#11161b] border border-slate-800 text-[#f4b72d] text-[10px] font-mono font-semibold uppercase">
                         {meta.tag}
-                      </TechBadge>
+                      </span>
                     </div>
 
                     <div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
+                      <h3 className="text-lg font-bold text-[#f5f6f7] group-hover:text-[#f4b72d] transition-colors leading-snug">
                         {srv.name}
                       </h3>
-                      <p className="text-xs font-semibold text-amber-400 mt-1">
+                      <p className="text-xs font-semibold text-[#f4b72d] mt-1">
                         {meta.headline}
                       </p>
                     </div>
 
-                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
+                    <p className="text-xs text-[#9ca5ae] leading-relaxed font-normal">
                       {meta.summary}
                     </p>
 
-                    {/* Key capabilities pill list */}
-                    <div className="space-y-1.5 pt-2 border-t border-slate-800">
-                      {srv.capabilities.slice(0, 3).map((cap, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-[11px] text-slate-300 font-medium">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                    <ul className="space-y-2 pt-2 border-t border-slate-800/80">
+                      {srv.capabilities.slice(0, 3).map((cap, i) => (
+                        <li key={i} className="flex items-center gap-2 text-xs text-slate-300">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#f4b72d] shrink-0" />
                           <span className="truncate">{cap}</span>
-                        </div>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-slate-800 flex flex-col gap-2">
+                  <div className="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
                     <button
                       type="button"
                       onClick={() => onNavigate('services', srv.slug)}
-                      className="w-full py-2.5 px-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20"
+                      className="text-xs font-semibold text-slate-300 hover:text-white transition-colors cursor-pointer"
                     >
-                      <span>Explore Service</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      Learn More
                     </button>
                     <button
                       type="button"
                       onClick={() => onOpenContactWithService(srv.name)}
-                      className="w-full py-2 px-4 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-amber-500/40 text-xs font-semibold transition-colors cursor-pointer text-center"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#f4b72d] hover:bg-[#ffd76a] text-slate-950 font-bold text-xs transition-all cursor-pointer shadow-sm shadow-[#f4b72d]/10"
                     >
-                      Book Consultation
+                      <span>Consult</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   </div>
                 </div>

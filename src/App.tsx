@@ -175,7 +175,7 @@ const MainApp: React.FC = () => {
   };
 
   return (
-    <div id="lrtp-app-root" className="min-h-screen bg-[#fafbff] text-slate-900 flex flex-col font-sans selection:bg-[#1a56db] selection:text-white">
+    <div id="lrtp-app-root" className="min-h-screen bg-[#050607] text-[#f5f6f7] flex flex-col font-sans selection:bg-[#f4b72d] selection:text-slate-950">
       {/* Navigation */}
       <Navbar
         currentView={currentView}

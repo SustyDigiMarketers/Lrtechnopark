@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({
   onOpenTracker
 }) => {
   return (
-    <footer className="bg-[#05070a] border-t border-slate-800 text-slate-400 text-sm">
+    <footer className="bg-[#050607] border-t border-slate-800/90 text-[#9ca5ae] text-sm">
       {/* Main Footer Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
@@ -24,34 +24,34 @@ export const Footer: React.FC<FooterProps> = ({
               }}
               className="flex items-center gap-3 cursor-pointer group"
             >
-              <div className="w-10 h-10 rounded-2xl bg-[#0d1322] border border-amber-500/30 flex items-center justify-center text-white shadow-md group-hover:border-amber-400 transition-colors">
-                <div className="text-xs font-black tracking-tighter text-amber-400 font-mono">
+              <div className="w-10 h-10 rounded-2xl bg-[#0b0e12] border border-[#f4b72d]/40 flex items-center justify-center text-white shadow-md group-hover:border-[#f4b72d] transition-colors">
+                <div className="text-xs font-black tracking-tighter text-[#f4b72d] font-mono">
                   LR
                 </div>
               </div>
               <div className="flex flex-col">
-                <span className="text-base font-bold tracking-tight text-white leading-none">
+                <span className="text-base font-bold tracking-tight text-[#f5f6f7] leading-none">
                   LR TECHNOPARK
                 </span>
-                <span className="text-[10px] font-mono tracking-widest text-amber-400/80 uppercase leading-tight mt-1">
+                <span className="text-[10px] font-mono tracking-widest text-[#f4b72d]/90 uppercase leading-tight mt-1">
                   IT INFRASTRUCTURE & HARDWARE
                 </span>
               </div>
             </div>
 
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm font-normal">
+            <p className="text-[#9ca5ae] text-sm leading-relaxed max-w-sm font-normal">
               Enterprise computer hardware, high-throughput networking, next-gen firewalls, and CCTV surveillance systems built for continuous operations.
             </p>
 
-            <div className="pt-2 flex items-center gap-2 text-xs text-amber-400/90 font-mono">
-              <ShieldCheck className="w-4 h-4 text-amber-400" />
+            <div className="pt-2 flex items-center gap-2 text-xs text-[#f4b72d]/90 font-mono">
+              <ShieldCheck className="w-4 h-4 text-[#f4b72d]" />
               <span>Certified IT Solutions & GST Invoicing</span>
             </div>
           </div>
 
           {/* Col 2: Services (3 cols) */}
           <div className="lg:col-span-3 space-y-3.5">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-[#f4b72d] font-bold">
               Services
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -59,7 +59,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('services', 'firewall')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   Firewall Solutions
                 </button>
@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('services', 'networking')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   Enterprise Networking
                 </button>
@@ -77,7 +77,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('services', 'cctv')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   CCTV Surveillance
                 </button>
@@ -86,7 +86,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('services', 'wifi')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   WiFi & High-Density Hotspots
                 </button>
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Col 3: Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-[#f4b72d] font-bold">
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -104,7 +104,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('home')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   Home
                 </button>
@@ -113,7 +113,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('products')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   Products Catalog
                 </button>
@@ -122,7 +122,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('about')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   About
                 </button>
@@ -131,7 +131,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('contact')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   Contact
                 </button>
@@ -140,7 +140,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('blogs')}
-                  className="hover:text-amber-400 transition-colors cursor-pointer text-left"
+                  className="hover:text-[#f4b72d] transition-colors cursor-pointer text-left"
                 >
                   Blogs & Insights
                 </button>
@@ -150,17 +150,17 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Col 4: Contact (3 cols) */}
           <div className="lg:col-span-3 space-y-3.5">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-amber-400 font-bold">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-[#f4b72d] font-bold">
               Contact
             </h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#f4b72d] shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs text-slate-500">Email</div>
                   <a
                     href="mailto:sales@lrtechnopark.com"
-                    className="text-slate-300 hover:text-amber-400 transition-colors"
+                    className="text-slate-300 hover:text-[#f4b72d] transition-colors"
                   >
                     sales@lrtechnopark.com
                   </a>
@@ -168,7 +168,7 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
 
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#f4b72d] shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs text-slate-500">Phone</div>
                   <span className="text-slate-300 font-mono">
@@ -178,7 +178,7 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
 
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#f4b72d] shrink-0 mt-0.5" />
                 <div>
                   <div className="text-xs text-slate-500">Location</div>
                   <span className="text-slate-300 leading-snug">
@@ -199,7 +199,7 @@ export const Footer: React.FC<FooterProps> = ({
             <button
               type="button"
               onClick={() => onNavigate('contact')}
-              className="hover:text-amber-400 transition-colors"
+              className="hover:text-[#f4b72d] transition-colors cursor-pointer"
             >
               Privacy Policy
             </button>
@@ -207,7 +207,7 @@ export const Footer: React.FC<FooterProps> = ({
             <button
               type="button"
               onClick={() => onNavigate('contact')}
-              className="hover:text-amber-400 transition-colors"
+              className="hover:text-[#f4b72d] transition-colors cursor-pointer"
             >
               Terms of Service
             </button>
@@ -217,4 +217,3 @@ export const Footer: React.FC<FooterProps> = ({
     </footer>
   );
 };
-
