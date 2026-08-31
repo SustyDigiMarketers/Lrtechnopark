@@ -79,7 +79,7 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
   };
 
   return (
-    <PageTransition className="pt-32 pb-24 bg-[#fafbff] min-h-screen text-slate-800">
+    <PageTransition className="pt-32 pb-24 bg-[#07090e] min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <SectionHeader
           indexTag="[ ADVISORY // 2026 ]"
@@ -94,49 +94,49 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12">
           {/* Left Column: Direct Telemetry & Locations (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/90 shadow-xs space-y-6">
-              <h3 className="text-lg font-bold text-slate-900">
+            <div className="p-6 sm:p-8 rounded-3xl bg-[#0d1322] border border-slate-800 shadow-xl space-y-6">
+              <h3 className="text-lg font-bold text-white">
                 Direct Enterprise Communications
               </h3>
 
               <div className="space-y-4 text-xs">
-                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                  <Phone className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+                  <Phone className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-bold text-slate-900">
+                    <div className="font-bold text-white">
                       Technical Hotline & Onsite Dispatch
                     </div>
-                    <div className="text-slate-600 font-mono mt-0.5">
+                    <div className="text-slate-400 font-mono mt-0.5">
                       +1 (800) 578-3246 / +91 98400 12345
                     </div>
-                    <div className="text-[10px] text-emerald-600 font-mono font-semibold mt-1">
+                    <div className="text-[10px] text-amber-400 font-mono font-semibold mt-1">
                       Guaranteed &lt; 2 business hours response
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                  <Mail className="w-4 h-4 text-[#1a56db] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+                  <Mail className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-bold text-slate-900">
+                    <div className="font-bold text-white">
                       Procurement & Hardware Quotes
                     </div>
-                    <div className="text-slate-600 font-mono mt-0.5">
+                    <div className="text-slate-400 font-mono mt-0.5">
                       sales@lrtechnopark.com
                     </div>
-                    <div className="text-[10px] text-blue-600 font-mono font-semibold mt-1">
+                    <div className="text-[10px] text-amber-400 font-mono font-semibold mt-1">
                       Direct quote & GST invoice verification
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                  <MapPin className="w-4 h-4 text-indigo-600 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+                  <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-bold text-slate-900">
+                    <div className="font-bold text-white">
                       Corporate Headquarters & Hardware Hub
                     </div>
-                    <div className="text-slate-600 mt-0.5 leading-relaxed">
+                    <div className="text-slate-400 mt-0.5 leading-relaxed">
                       LR Techno Park Complex, IT Corridor, Sector 4, Silicon Avenue
                     </div>
                   </div>
@@ -144,8 +144,8 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
               </div>
 
               {/* SLA Guarantee Box */}
-              <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100 flex items-center gap-3 text-xs text-blue-900">
-                <ShieldCheck className="w-5 h-5 text-[#1a56db] shrink-0" />
+              <div className="p-4 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center gap-3 text-xs text-amber-300">
+                <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0" />
                 <span className="font-normal">
                   All enterprise communications and quotes are recorded with strict data privacy and logged to Google Sheets for immediate response tracking.
                 </span>
@@ -155,20 +155,20 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
 
           {/* Right Column: Interactive Consultation & Message Form (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="p-6 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-xl">
+            <div className="p-6 sm:p-10 rounded-3xl bg-[#0d1322] border border-slate-800 shadow-xl">
               {isSuccess ? (
                 <div className="py-12 text-center space-y-4">
-                  <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto">
+                  <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-xl font-bold text-white">
                     Inquiry Successfully Logged & Dispatched
                   </h3>
-                  <div className="inline-block px-3 py-1 bg-slate-100 border border-slate-200 rounded-full font-mono text-xs font-bold text-[#1a56db]">
+                  <div className="inline-block px-3 py-1 bg-amber-400/10 border border-amber-400/30 rounded-full font-mono text-xs font-bold text-amber-400">
                     Enquiry ID: {submittedEnquiryId}
                   </div>
-                  <p className="text-xs text-slate-600 max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong className="text-slate-900">{formData.name}</strong>. A
+                  <p className="text-xs text-slate-400 max-w-md mx-auto leading-relaxed">
+                    Thank you, <strong className="text-white">{formData.name}</strong>. A
                     dedicated Senior Solutions Architect has been assigned to your
                     enquiry and will contact you within 2 business hours.
                   </p>
@@ -186,25 +186,25 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                         message: ''
                       });
                     }}
-                    className="mt-4 px-6 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold cursor-pointer"
+                    className="mt-4 px-6 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 text-xs font-semibold cursor-pointer transition-colors"
                   >
                     Send Another Inquiry
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="border-b border-slate-100 pb-3 mb-4">
-                    <h3 className="text-xl font-bold text-slate-900">
+                  <div className="border-b border-slate-800 pb-3 mb-4">
+                    <h3 className="text-xl font-bold text-white">
                       Request IT Solutions & Hardware Quote
                     </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">
+                    <p className="text-xs text-slate-400 mt-0.5">
                       Directly connect with solutions engineering leads
                     </p>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Your Full Name *
                       </label>
                       <input
@@ -215,12 +215,12 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                           setFormData({ ...formData, name: e.target.value })
                         }
                         placeholder="e.g. Rachel Jenkins"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-slate-900"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Corporate Email Address *
                       </label>
                       <input
@@ -231,14 +231,14 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                           setFormData({ ...formData, email: e.target.value })
                         }
                         placeholder="rachel.jenkins@company.com"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-slate-900"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Company / Organization *
                       </label>
                       <input
@@ -249,12 +249,12 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                           setFormData({ ...formData, company: e.target.value })
                         }
                         placeholder="e.g. Apex Global Systems"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-slate-900"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Phone Number
                       </label>
                       <input
@@ -264,13 +264,13 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                           setFormData({ ...formData, phone: e.target.value })
                         }
                         placeholder="+1 (555) 019-2834"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-slate-900"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Primary Solution / Service Domain *
                     </label>
                     <select
@@ -278,7 +278,7 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                       onChange={(e) =>
                         setFormData({ ...formData, topic: e.target.value })
                       }
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-500 focus:bg-slate-900"
                     >
                       <option>Computer Hardware Procurement & Workstations</option>
                       <option>Firewall & Network Security Deployment</option>
@@ -291,7 +291,7 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Requirements & Site Details *
                     </label>
                     <textarea
@@ -302,14 +302,14 @@ export const ContactPage: React.FC<{ initialSubject?: string }> = ({
                         setFormData({ ...formData, message: e.target.value })
                       }
                       placeholder="Please describe the quantities required, office/facility layout, current network devices, or requested installation timeline..."
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 focus:bg-slate-900"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-full bg-[#1a56db] hover:bg-[#1545b3] disabled:opacity-50 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg shadow-blue-600/25 active:scale-98"
+                    className="w-full py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-50 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg shadow-amber-500/20 active:scale-98"
                   >
                     {isSubmitting ? (
                       <span>Dispatching to Solutions Architecture...</span>

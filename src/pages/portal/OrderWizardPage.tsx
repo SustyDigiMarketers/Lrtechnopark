@@ -171,10 +171,10 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
   };
 
   return (
-    <PageTransition className="pt-32 pb-24 bg-[#fafbff] min-h-screen text-slate-800">
+    <PageTransition className="pt-32 pb-24 bg-[#07090e] min-h-screen text-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Header */}
-        <div className="border-b border-slate-200 pb-6">
+        <div className="border-b border-slate-800 pb-6">
           <SectionHeader
             indexTag="[ PROCUREMENT // WIZARD ]"
             badge="HARDWARE ORDER & FULFILLMENT GATEWAY"
@@ -189,12 +189,12 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
         {!createdOrderResult && (
           <div className="space-y-3">
             {/* Mobile Compact Stepper */}
-            <div className="sm:hidden flex items-center justify-between p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <div className="sm:hidden flex items-center justify-between p-4 rounded-2xl bg-[#0d1322] border border-slate-800 shadow-xl">
               <div>
-                <div className="text-[10px] font-mono font-bold tracking-widest text-[#1a56db] uppercase">
+                <div className="text-[10px] font-mono font-bold tracking-widest text-amber-400 uppercase">
                   Step {currentStep} of 4
                 </div>
-                <div className="text-sm font-bold text-slate-900">
+                <div className="text-sm font-bold text-white">
                   {currentStep === 1 && '01 Product Selection'}
                   {currentStep === 2 && '02 Delivery & Fulfillment'}
                   {currentStep === 3 && '03 Billing & GST'}
@@ -207,10 +207,10 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                     key={s}
                     className={`w-2.5 h-2.5 rounded-full transition-all ${
                       currentStep === s
-                        ? 'bg-[#1a56db] ring-2 ring-blue-200'
+                        ? 'bg-amber-400 ring-2 ring-amber-400/30'
                         : currentStep > s
-                        ? 'bg-emerald-500'
-                        : 'bg-slate-200'
+                        ? 'bg-emerald-400'
+                        : 'bg-slate-800'
                     }`}
                   />
                 ))}
@@ -232,26 +232,26 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                     key={step.num}
                     className={`p-4 rounded-2xl border transition-all ${
                       isCurrent
-                        ? 'bg-blue-50/60 border-[#1a56db] ring-1 ring-[#1a56db]/30 text-slate-900 shadow-xs'
+                        ? 'bg-amber-400/10 border-amber-400/80 ring-1 ring-amber-400/30 text-white shadow-xl'
                         : isCompleted
-                        ? 'bg-emerald-50/40 text-emerald-800 border-emerald-200/70'
-                        : 'bg-white text-slate-400 border-slate-200/70'
+                        ? 'bg-emerald-950/30 text-emerald-300 border-emerald-800/60'
+                        : 'bg-[#0d1322] text-slate-400 border-slate-800'
                     }`}
                   >
                     <div className="flex items-center justify-between">
                       <span
                         className={`text-[10px] font-mono font-bold tracking-wider uppercase ${
                           isCurrent
-                            ? 'text-[#1a56db]'
+                            ? 'text-amber-400'
                             : isCompleted
-                            ? 'text-emerald-700'
-                            : 'text-slate-400'
+                            ? 'text-emerald-400'
+                            : 'text-slate-500'
                         }`}
                       >
                         0{step.num} {isCompleted ? '✓ Done' : isCurrent ? 'Active' : 'Upcoming'}
                       </span>
                     </div>
-                    <div className={`text-xs font-bold mt-1 ${isCurrent ? 'text-slate-900' : isCompleted ? 'text-emerald-900' : 'text-slate-500'}`}>
+                    <div className={`text-xs font-bold mt-1 ${isCurrent ? 'text-white' : isCompleted ? 'text-emerald-300' : 'text-slate-400'}`}>
                       {step.title}
                     </div>
                     <div className="text-[10px] text-slate-400 font-mono mt-0.5">
@@ -265,7 +265,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
         )}
 
         {/* Wizard Main Card */}
-        <div className="rounded-3xl bg-white border border-slate-200/90 shadow-xl p-6 sm:p-10 relative overflow-hidden">
+        <div className="rounded-3xl bg-[#0d1322] border border-slate-800 shadow-xl p-6 sm:p-10 relative overflow-hidden text-white">
           {/* Order Success State */}
           {createdOrderResult ? (
             <motion.div
@@ -273,7 +273,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
               animate={{ opacity: 1, scale: 1 }}
               className="py-8 space-y-6 text-center"
             >
-              <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
+              <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto shadow-md">
                 <CheckCircle2 className="w-9 h-9" />
               </div>
 
@@ -281,35 +281,35 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                 <TechBadge variant="emerald" size="md" dot>
                   ORDER COMMITTED & DISPATCHED
                 </TechBadge>
-                <h2 className="text-2xl sm:text-3xl font-black text-slate-900">
+                <h2 className="text-2xl sm:text-3xl font-black text-white">
                   Hardware Order Placed!
                 </h2>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                <p className="text-xs text-slate-300 leading-relaxed font-normal">
                   Your procurement request has been validated, assigned to the operations queue, and synchronized to the Google Sheets ledger.
                 </p>
               </div>
 
               {/* Order Reference Box */}
-              <div className="max-w-md mx-auto p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 text-left">
-                <div className="flex items-center justify-between border-b border-slate-200 pb-2.5">
-                  <span className="text-xs text-slate-500">Order Reference ID:</span>
-                  <span className="font-mono font-bold text-[#1a56db] text-sm">
+              <div className="max-w-md mx-auto p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-3 text-left">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2.5">
+                  <span className="text-xs text-slate-400">Order Reference ID:</span>
+                  <span className="font-mono font-bold text-amber-400 text-sm">
                     {createdOrderResult.id}
                   </span>
                 </div>
-                <div className="flex items-center justify-between border-b border-slate-200 pb-2.5 text-xs">
-                  <span className="text-slate-500">Hardware Product:</span>
-                  <span className="font-bold text-slate-900">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2.5 text-xs">
+                  <span className="text-slate-400">Hardware Product:</span>
+                  <span className="font-bold text-white">
                     {createdOrderResult.items[0]?.productName}
                   </span>
                 </div>
-                <div className="flex items-center justify-between border-b border-slate-200 pb-2.5 text-xs">
-                  <span className="text-slate-500">Total Investment (Incl. GST):</span>
-                  <span className="font-mono font-black text-slate-900">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2.5 text-xs">
+                  <span className="text-slate-400">Total Investment (Incl. GST):</span>
+                  <span className="font-mono font-black text-amber-400">
                     ₹{createdOrderResult.total?.toLocaleString('en-IN')}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-xs text-emerald-700 font-semibold">
+                <div className="flex items-center justify-between text-xs text-emerald-400 font-semibold">
                   <span className="flex items-center gap-1.5 font-mono">
                     <ShieldCheck className="w-4 h-4" /> Google Sheets Sync:
                   </span>
@@ -322,7 +322,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                 <button
                   type="button"
                   onClick={() => onOpenTracker(createdOrderResult.id)}
-                  className="px-6 py-3 rounded-full bg-[#1a56db] hover:bg-[#1545b3] text-white font-bold text-xs flex items-center gap-2 cursor-pointer shadow-md shadow-blue-600/20 active:scale-98"
+                  className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 cursor-pointer shadow-md shadow-amber-500/20 active:scale-98"
                 >
                   <Search className="w-4 h-4" />
                   <span>Track Fulfillment Pipeline</span>
@@ -331,7 +331,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                 <button
                   type="button"
                   onClick={() => onNavigate('portal-orders')}
-                  className="px-5 py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold cursor-pointer"
+                  className="px-5 py-3 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold cursor-pointer transition-colors"
                 >
                   View in Orders Ledger
                 </button>
@@ -343,10 +343,10 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
               {currentStep === 1 && (
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900">
+                    <h3 className="text-xl font-bold text-white">
                       Select IT Hardware Product & Quantity
                     </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">
+                    <p className="text-xs text-slate-400 mt-0.5">
                       Choose from commercial desktops, 4K CCTV cameras, switches, or laptops
                     </p>
                   </div>
@@ -358,33 +358,33 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         onClick={() => setSelectedProductId(prod.id)}
                         className={`p-5 rounded-2xl border cursor-pointer transition-all ${
                           selectedProductId === prod.id
-                            ? 'bg-blue-50/70 border-[#1a56db] ring-1 ring-[#1a56db] shadow-xs'
-                            : 'bg-white border-slate-200 hover:border-slate-300'
+                            ? 'bg-amber-400/10 border-amber-400 ring-1 ring-amber-400 shadow-lg'
+                            : 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
                         }`}
                       >
                         <div className="flex items-center justify-between">
-                          <span className="font-bold text-sm text-slate-900">
+                          <span className="font-bold text-sm text-white">
                             {prod.name}
                           </span>
-                          <span className="text-[10px] font-mono font-bold text-[#1a56db] bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-100">
+                          <span className="text-[10px] font-mono font-bold text-amber-400 bg-amber-400/10 px-2.5 py-0.5 rounded-full border border-amber-400/20">
                             {prod.code}
                           </span>
                         </div>
-                        <div className="text-[11px] font-semibold text-blue-600 mt-0.5 uppercase">
+                        <div className="text-[11px] font-semibold text-amber-400/90 mt-0.5 uppercase">
                           {prod.brand} &bull; {prod.category}
                         </div>
-                        <p className="text-xs text-slate-600 mt-1 line-clamp-2">
+                        <p className="text-xs text-slate-300 mt-1 line-clamp-2">
                           {prod.shortDescription}
                         </p>
-                        <div className="mt-3 flex items-baseline justify-between text-xs font-mono text-slate-500">
+                        <div className="mt-3 flex items-baseline justify-between text-xs font-mono text-slate-400">
                           <span>
                             Price:{' '}
-                            <strong className="text-slate-900 font-bold text-sm">
+                            <strong className="text-white font-bold text-sm">
                               ₹{prod.price.toLocaleString('en-IN')}
                             </strong>{' '}
                             / {prod.unit || 'Unit'}
                           </span>
-                          <span className="text-emerald-600 font-semibold text-[11px]">
+                          <span className="text-emerald-400 font-semibold text-[11px]">
                             {prod.availability}
                           </span>
                         </div>
@@ -393,10 +393,10 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                   </div>
 
                   {/* Quantity Stepper */}
-                  <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-                    <div className="flex justify-between text-xs font-bold text-slate-700">
+                  <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+                    <div className="flex justify-between text-xs font-bold text-slate-300">
                       <span>Select Unit Quantity ({selectedProduct.unit || 'Units'}):</span>
-                      <span className="font-mono text-[#1a56db] font-bold text-sm">
+                      <span className="font-mono text-amber-400 font-bold text-sm">
                         {quantity} {selectedProduct.unit || 'Units'}
                       </span>
                     </div>
@@ -404,7 +404,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                       <button
                         type="button"
                         onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                        className="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-800 font-bold text-base flex items-center justify-center cursor-pointer transition-colors"
+                        className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 text-white font-bold text-base flex items-center justify-center cursor-pointer hover:bg-slate-800 transition-colors"
                       >
                         -
                       </button>
@@ -414,18 +414,18 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         max="500"
                         value={quantity}
                         onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                        className="flex-1 text-center font-mono font-bold text-sm bg-white border border-slate-200 rounded-xl py-2 text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                        className="flex-1 text-center font-mono font-bold text-sm bg-slate-900 border border-slate-700 rounded-xl py-2 text-white focus:outline-none focus:border-amber-400"
                       />
                       <button
                         type="button"
                         onClick={() => setQuantity(quantity + 1)}
-                        className="w-10 h-10 rounded-xl bg-white border border-slate-200 text-slate-800 font-bold text-base flex items-center justify-center cursor-pointer transition-colors"
+                        className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 text-white font-bold text-base flex items-center justify-center cursor-pointer hover:bg-slate-800 transition-colors"
                       >
                         +
                       </button>
                     </div>
                     {selectedProduct.discountPrice && quantity < 5 && (
-                      <div className="text-[11px] text-slate-500">
+                      <div className="text-[11px] text-slate-400">
                         * Bulk pricing applies for orders of 5 units or more (₹{selectedProduct.discountPrice.toLocaleString('en-IN')}/unit).
                       </div>
                     )}
@@ -437,16 +437,16 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
               {currentStep === 2 && (
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900">
+                    <h3 className="text-xl font-bold text-white">
                       Fulfillment & Commissioning Model
                     </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">
+                    <p className="text-xs text-slate-400 mt-0.5">
                       Select hardware logistics and on-site engineering staging
                     </p>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-2">
+                    <label className="block text-xs font-bold text-slate-300 mb-2">
                       Fulfillment Option
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -477,15 +477,15 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                             onClick={() => setDeploymentTier(dep.id)}
                             className={`p-5 rounded-2xl border cursor-pointer transition-all ${
                               deploymentTier === dep.id
-                                ? 'bg-blue-50/70 border-[#1a56db] ring-1 ring-[#1a56db] shadow-xs'
-                                : 'bg-white border-slate-200 hover:border-slate-300'
+                                ? 'bg-amber-400/10 border-amber-400 ring-1 ring-amber-400 shadow-lg'
+                                : 'bg-slate-900/80 border-slate-800 hover:border-slate-700'
                             }`}
                           >
-                            <Icon className="w-5 h-5 text-[#1a56db] mb-2" />
-                            <div className="text-xs font-bold text-slate-900">
+                            <Icon className="w-5 h-5 text-amber-400 mb-2" />
+                            <div className="text-xs font-bold text-white">
                               {dep.label}
                             </div>
-                            <div className="text-[11px] text-slate-500 mt-1">
+                            <div className="text-[11px] text-slate-400 mt-1">
                               {dep.desc}
                             </div>
                           </div>
@@ -494,14 +494,14 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                  <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+                      <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
                       <div>
-                        <div className="text-xs font-bold text-slate-900">
+                        <div className="text-xs font-bold text-white">
                           Annual Comprehensive On-Site AMC Support (₹2,500/unit/yr)
                         </div>
-                        <div className="text-[11px] text-slate-500 font-normal">
+                        <div className="text-[11px] text-slate-400 font-normal">
                           Includes quarterly preventive maintenance, optical testing, and genuine replacement components
                         </div>
                       </div>
@@ -510,12 +510,12 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                       type="checkbox"
                       checked={includeOnsiteAMC}
                       onChange={(e) => setIncludeOnsiteAMC(e.target.checked)}
-                      className="w-4 h-4 text-[#1a56db] accent-[#1a56db] cursor-pointer"
+                      className="w-4 h-4 text-amber-400 accent-amber-400 cursor-pointer"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Custom Hardware Staging Notes (Optional)
                     </label>
                     <textarea
@@ -523,7 +523,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                       value={configurationNotes}
                       onChange={(e) => setConfigurationNotes(e.target.value)}
                       placeholder="e.g., Pre-configure IP ranges 192.168.1.0/24, OS staging, or tag VLAN 20 on ports 1-12..."
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                     />
                   </div>
                 </div>
@@ -533,17 +533,17 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
               {currentStep === 3 && (
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900">
+                    <h3 className="text-xl font-bold text-white">
                       Procurement & GST Tax Invoice Details
                     </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">
+                    <p className="text-xs text-slate-400 mt-0.5">
                       Enter billing contact, GSTIN, and delivery location
                     </p>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Company / Organization *
                       </label>
                       <input
@@ -552,12 +552,12 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         value={companyName}
                         onChange={(e) => setCompanyName(e.target.value)}
                         placeholder="e.g. Apex Enterprise Solutions Pvt Ltd"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Authorized Contact Name *
                       </label>
                       <input
@@ -566,14 +566,14 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         value={customerName}
                         onChange={(e) => setCustomerName(e.target.value)}
                         placeholder="e.g. Anand Kumar"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Corporate Email Address *
                       </label>
                       <input
@@ -582,12 +582,12 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         value={customerEmail}
                         onChange={(e) => setCustomerEmail(e.target.value)}
                         placeholder="anand@company.com"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Phone Number
                       </label>
                       <input
@@ -595,14 +595,14 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="+91 98400 12345"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         GSTIN / Corporate Tax ID
                       </label>
                       <input
@@ -610,12 +610,12 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         value={taxId}
                         onChange={(e) => setTaxId(e.target.value)}
                         placeholder="33AAACL8890K1ZV"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">
+                      <label className="block text-xs font-bold text-slate-300 mb-1">
                         Purchase Order (PO) Reference #
                       </label>
                       <input
@@ -623,13 +623,13 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         value={purchaseOrderNumber}
                         onChange={(e) => setPurchaseOrderNumber(e.target.value)}
                         placeholder="PO-2026-9042"
-                        className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Shipping / Site Delivery Address *
                     </label>
                     <input
@@ -638,7 +638,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                       value={shippingAddress}
                       onChange={(e) => setShippingAddress(e.target.value)}
                       placeholder="Building name, Floor, Tech Park, City, PIN"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl p-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db] focus:bg-white"
+                      className="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
                     />
                   </div>
                 </div>
@@ -648,23 +648,23 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
               {currentStep === 4 && (
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900">
+                    <h3 className="text-xl font-bold text-white">
                       Review & Confirm Hardware Order
                     </h3>
-                    <p className="text-xs text-slate-500 mt-0.5">
+                    <p className="text-xs text-slate-400 mt-0.5">
                       Validate all line items before dispatching to operations queue and Google Sheets
                     </p>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4 text-xs">
-                    <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <div className="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-4 text-xs">
+                    <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                       <div>
-                        <div className="font-bold text-slate-900 text-sm">
+                        <div className="font-bold text-white text-sm">
                           {selectedProduct.name}
                         </div>
-                        <div className="text-slate-500 text-xs mt-0.5">
+                        <div className="text-slate-400 text-xs mt-0.5">
                           Code:{' '}
-                          <span className="font-mono text-[#1a56db] font-semibold">
+                          <span className="font-mono text-amber-400 font-semibold">
                             {selectedProduct.code}
                           </span>{' '}
                           &bull; {selectedProduct.category} &bull;{' '}
@@ -672,7 +672,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="font-mono font-bold text-slate-900">
+                        <div className="font-mono font-bold text-white">
                           ₹{lineItemTotal.toLocaleString('en-IN')}
                         </div>
                         <div className="text-slate-400 text-[10px]">
@@ -682,61 +682,61 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                     </div>
 
                     {includeOnsiteAMC && (
-                      <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+                      <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                         <div>
-                          <div className="font-semibold text-slate-900">
+                          <div className="font-semibold text-white">
                             Annual Comprehensive On-Site AMC Support
                           </div>
-                          <div className="text-slate-500 text-[11px]">
+                          <div className="text-slate-400 text-[11px]">
                             Onsite hardware maintenance and replacement support (₹2,500/unit)
                           </div>
                         </div>
-                        <div className="font-mono font-bold text-slate-900">₹{amcSupportFee.toLocaleString('en-IN')}</div>
+                        <div className="font-mono font-bold text-white">₹{amcSupportFee.toLocaleString('en-IN')}</div>
                       </div>
                     )}
 
-                    <div className="space-y-2 pt-2 text-slate-600 font-normal">
+                    <div className="space-y-2 pt-2 text-slate-300 font-normal">
                       <div className="flex justify-between">
                         <span>Organization:</span>
-                        <strong className="text-slate-900">
+                        <strong className="text-white">
                           {companyName} ({customerName})
                         </strong>
                       </div>
                       <div className="flex justify-between">
                         <span>Shipping Address:</span>
-                        <span className="text-slate-800 text-right max-w-xs truncate">
+                        <span className="text-slate-200 text-right max-w-xs truncate">
                           {shippingAddress}
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span>Corporate PO:</span>
-                        <strong className="text-slate-900 font-mono">
+                        <strong className="text-white font-mono">
                           {purchaseOrderNumber}
                         </strong>
                       </div>
                       <div className="flex justify-between">
                         <span>Base Subtotal:</span>
-                        <span className="font-mono text-slate-900 font-bold">
+                        <span className="font-mono text-white font-bold">
                           ₹{subtotal.toLocaleString('en-IN')}
                         </span>
                       </div>
                       <div className="flex justify-between">
                         <span>Estimated Tax (18% GST):</span>
-                        <span className="font-mono text-slate-900 font-bold">
+                        <span className="font-mono text-white font-bold">
                           ₹{tax.toLocaleString('en-IN')}
                         </span>
                       </div>
-                      <div className="flex justify-between text-base font-bold text-slate-900 pt-2 border-t border-slate-200">
+                      <div className="flex justify-between text-base font-bold text-white pt-2 border-t border-slate-800">
                         <span>Grand Total (Incl. GST):</span>
-                        <span className="font-mono text-[#1a56db] font-black">
+                        <span className="font-mono text-amber-400 font-black">
                           ₹{grandTotal.toLocaleString('en-IN')}
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-100 text-xs text-emerald-800 flex items-center gap-2.5">
-                    <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <div className="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-800/60 text-xs text-emerald-300 flex items-center gap-2.5">
+                    <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
                     <span className="font-normal">
                       Order submission automatically logs the transaction in the Product Orders Google Sheet and initializes staging.
                     </span>
@@ -745,12 +745,12 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
               )}
 
               {/* Wizard Navigation Footer */}
-              <div className="flex items-center justify-between pt-8 border-t border-slate-100 mt-8">
+              <div className="flex items-center justify-between pt-8 border-t border-slate-800 mt-8">
                 {currentStep > 1 ? (
                   <button
                     type="button"
                     onClick={handlePrevStep}
-                    className="px-5 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+                    className="px-5 py-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
                   >
                     <ArrowLeft className="w-3.5 h-3.5" />
                     <span>Back</span>
@@ -763,7 +763,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    className="px-6 py-3 rounded-full bg-[#1a56db] hover:bg-[#1545b3] text-white text-xs font-bold flex items-center gap-2 transition-all cursor-pointer shadow-md shadow-blue-600/20 active:scale-98"
+                    className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs font-bold flex items-center gap-2 transition-all cursor-pointer shadow-md shadow-amber-500/20 active:scale-98"
                   >
                     <span>Continue to Step 0{currentStep + 1}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -773,7 +773,7 @@ export const OrderWizardPage: React.FC<OrderWizardPageProps> = ({
                     type="button"
                     disabled={isCreatingOrder}
                     onClick={handleSubmitOrder}
-                    className="px-8 py-3.5 rounded-full bg-[#1a56db] hover:bg-[#1545b3] disabled:opacity-50 text-white text-xs font-bold flex items-center gap-2 transition-all cursor-pointer shadow-lg shadow-blue-600/25 active:scale-98"
+                    className="px-8 py-3.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-50 text-slate-950 text-xs font-bold flex items-center gap-2 transition-all cursor-pointer shadow-lg shadow-amber-500/25 active:scale-98"
                   >
                     {isCreatingOrder ? (
                       <span>Transmitting to Order Gateway...</span>

@@ -127,7 +127,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
   };
 
   return (
-    <PageTransition className="pt-32 pb-24 bg-[#fafbff] min-h-screen text-slate-800">
+    <PageTransition className="pt-32 pb-24 bg-[#07090e] min-h-screen text-white">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <SectionHeader
@@ -149,7 +149,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             <div
               key={service.id}
               id={service.slug}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-xl transition-all"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-10 rounded-3xl bg-[#0d1322] border border-slate-800 shadow-xl hover:shadow-2xl hover:border-amber-500/50 transition-all"
             >
               {/* Service Info (7 cols) */}
               <div
@@ -158,34 +158,34 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 }`}
               >
                 <div className="flex items-center gap-3.5">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1a56db]">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-amber-400">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-mono font-bold uppercase text-[#1a56db] tracking-wider">
+                    <span className="text-[10px] font-mono font-bold uppercase text-amber-400 tracking-wider">
                       SERVICE PRACTICE 0{index + 1}
                     </span>
-                    <h2 className="text-2xl font-black text-slate-900">{service.name}</h2>
+                    <h2 className="text-2xl font-black text-white">{service.name}</h2>
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                   {service.shortDescription}
                 </p>
 
                 {/* Capabilities */}
                 <div className="space-y-2.5">
-                  <h4 className="text-xs uppercase tracking-wider text-slate-500 font-bold font-mono">
+                  <h4 className="text-xs uppercase tracking-wider text-slate-400 font-bold font-mono">
                     CORE DELIVERABLES & SERVICE HIGHLIGHTS
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                     {service.capabilities.map((cap, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-2 p-2.5 rounded-2xl bg-slate-50 border border-slate-100"
+                        className="flex items-start gap-2 p-2.5 rounded-2xl bg-slate-900/80 border border-slate-800"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="text-slate-700 font-semibold">{cap}</span>
+                        <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                        <span className="text-slate-200 font-semibold">{cap}</span>
                       </div>
                     ))}
                   </div>
@@ -197,7 +197,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   {service.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11px] font-mono border border-slate-200"
+                      className="px-2.5 py-0.5 rounded-full bg-slate-900 text-slate-300 text-[11px] font-mono border border-slate-800"
                     >
                       {tech}
                     </span>
@@ -209,7 +209,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   <button
                     type="button"
                     onClick={() => handleOpenBooking(service.name)}
-                    className="px-6 py-3 rounded-full bg-[#1a56db] hover:bg-[#1545b3] text-white font-bold text-xs flex items-center gap-2 transition-all cursor-pointer shadow-md shadow-blue-600/20 active:scale-98"
+                    className="px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition-all cursor-pointer shadow-md shadow-amber-500/20 active:scale-98"
                   >
                     <Calendar className="w-3.5 h-3.5" />
                     <span>Book {service.name}</span>
@@ -219,7 +219,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   <button
                     type="button"
                     onClick={() => onOpenContact(service.name)}
-                    className="px-5 py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-2 transition-all cursor-pointer"
+                    className="px-5 py-3 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white font-bold text-xs flex items-center gap-2 transition-all cursor-pointer"
                   >
                     <span>Request Custom Scope Quote</span>
                   </button>
@@ -232,9 +232,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   isReversed ? 'lg:col-span-5 lg:order-1' : 'lg:col-span-5'
                 }`}
               >
-                <div className="p-6 sm:p-7 rounded-3xl bg-slate-50 border border-slate-200/90 space-y-4">
-                  <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                    <span className="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider">
+                <div className="p-6 sm:p-7 rounded-3xl bg-slate-900/80 border border-slate-800 space-y-4">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+                    <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">
                       DELIVERY METHODOLOGY
                     </span>
                     <TechBadge variant="blue" size="sm">
@@ -245,12 +245,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   <div className="space-y-3">
                     {service.processSteps.map((step) => (
                       <div key={step.stepNumber} className="flex items-start gap-3 text-xs">
-                        <div className="w-7 h-7 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[11px] font-bold text-[#1a56db] shrink-0 shadow-xs font-mono">
+                        <div className="w-7 h-7 rounded-xl bg-slate-950 border border-amber-400/30 flex items-center justify-center text-[11px] font-bold text-amber-400 shrink-0 shadow-xs font-mono">
                           {step.stepNumber}
                         </div>
                         <div>
-                          <div className="font-bold text-slate-900">{step.phase}</div>
-                          <div className="text-[11px] text-slate-500 mt-0.5 leading-snug">
+                          <div className="font-bold text-white">{step.phase}</div>
+                          <div className="text-[11px] text-slate-400 mt-0.5 leading-snug">
                             {step.outcome}
                           </div>
                         </div>
@@ -266,29 +266,29 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
       {/* Interactive Service Booking Modal */}
       {bookingModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
-          <div className="relative w-full max-w-xl bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-xs">
+          <div className="relative w-full max-w-xl bg-[#0d1322] rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800 max-h-[90vh] overflow-y-auto">
             <button
               type="button"
               onClick={() => setBookingModalOpen(false)}
-              className="absolute top-6 right-6 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+              className="absolute top-6 right-6 p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
 
             {bookingConfirmed ? (
               <div className="py-8 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">
+                <h3 className="text-xl font-bold text-white">
                   Service Booking Confirmed
                 </h3>
-                <div className="inline-block px-3 py-1 bg-blue-50 border border-blue-200 rounded-full font-mono text-xs font-bold text-[#1a56db]">
+                <div className="inline-block px-3 py-1 bg-amber-400/10 border border-amber-400/30 rounded-full font-mono text-xs font-bold text-amber-400">
                   Booking Reference: {bookingConfirmed.id}
                 </div>
-                <p className="text-xs text-slate-600 max-w-md mx-auto leading-relaxed">
-                  Your booking for <strong className="text-slate-900">{bookingConfirmed.service}</strong> has been logged and synced to our service operations pipeline. A certified field engineer will contact you prior to arrival.
+                <p className="text-xs text-slate-400 max-w-md mx-auto leading-relaxed">
+                  Your booking for <strong className="text-white">{bookingConfirmed.service}</strong> has been logged and synced to our service operations pipeline. A certified field engineer will contact you prior to arrival.
                 </p>
                 <button
                   type="button"
@@ -296,28 +296,28 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                     setBookingModalOpen(false);
                     setBookingConfirmed(null);
                   }}
-                  className="px-6 py-2.5 rounded-full bg-[#1a56db] text-white text-xs font-bold shadow-md cursor-pointer"
+                  className="px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-bold shadow-md cursor-pointer"
                 >
                   Done
                 </button>
               </div>
             ) : (
               <form onSubmit={handleBookingSubmit} className="space-y-4">
-                <div className="border-b border-slate-100 pb-3">
+                <div className="border-b border-slate-800 pb-3">
                   <TechBadge variant="blue" size="sm">
                     SERVICE DISPATCH
                   </TechBadge>
-                  <h3 className="text-xl font-bold text-slate-900 mt-2">
+                  <h3 className="text-xl font-bold text-white mt-2">
                     Schedule On-Site Service & Deployment
                   </h3>
-                  <p className="text-xs text-slate-500 mt-0.5">
+                  <p className="text-xs text-slate-400 mt-0.5">
                     Book certified technicians for installation, configuration, and testing.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Full Name *
                     </label>
                     <input
@@ -326,12 +326,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                       value={bookingForm.customerName}
                       onChange={(e) => setBookingForm({ ...bookingForm, customerName: e.target.value })}
                       placeholder="e.g. Anand Kumar"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Company / Facility Name
                     </label>
                     <input
@@ -339,14 +339,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                       value={bookingForm.company}
                       onChange={(e) => setBookingForm({ ...bookingForm, company: e.target.value })}
                       placeholder="e.g. Apex Tech Park"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Corporate Email *
                     </label>
                     <input
@@ -355,12 +355,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                       value={bookingForm.email}
                       onChange={(e) => setBookingForm({ ...bookingForm, email: e.target.value })}
                       placeholder="anand@apex.example"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Phone Number *
                     </label>
                     <input
@@ -369,19 +369,19 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                       value={bookingForm.phone}
                       onChange={(e) => setBookingForm({ ...bookingForm, phone: e.target.value })}
                       placeholder="+91 98400 12345"
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-bold text-slate-300 mb-1">
                     Select Service Category *
                   </label>
                   <select
                     value={bookingForm.service}
                     onChange={(e) => setBookingForm({ ...bookingForm, service: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                    className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-500"
                   >
                     <option value="Firewall & Network Security">Firewall & Network Security</option>
                     <option value="Networking & Infrastructure">Networking & Infrastructure</option>
@@ -392,7 +392,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Preferred Date *
                     </label>
                     <input
@@ -400,18 +400,18 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                       required
                       value={bookingForm.preferredDate}
                       onChange={(e) => setBookingForm({ ...bookingForm, preferredDate: e.target.value })}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-500"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">
+                    <label className="block text-xs font-bold text-slate-300 mb-1">
                       Preferred Time Window
                     </label>
                     <select
                       value={bookingForm.preferredTime}
                       onChange={(e) => setBookingForm({ ...bookingForm, preferredTime: e.target.value })}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-500"
                     >
                       <option value="09:00 AM - 12:00 PM">09:00 AM - 12:00 PM (Morning Slot)</option>
                       <option value="12:00 PM - 03:00 PM">12:00 PM - 03:00 PM (Afternoon Slot)</option>
@@ -422,7 +422,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-bold text-slate-300 mb-1">
                     Site Location Address *
                   </label>
                   <input
@@ -431,12 +431,12 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                     value={bookingForm.location}
                     onChange={(e) => setBookingForm({ ...bookingForm, location: e.target.value })}
                     placeholder="Floor / Building / Tech Park / City"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                    className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                  <label className="block text-xs font-bold text-slate-300 mb-1">
                     Requirements & Equipment Details
                   </label>
                   <textarea
@@ -444,14 +444,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                     value={bookingForm.requirements}
                     onChange={(e) => setBookingForm({ ...bookingForm, requirements: e.target.value })}
                     placeholder="Describe specific devices, port counts, camera locations, or cable run details..."
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                    className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 rounded-full bg-[#1a56db] hover:bg-[#1545b3] disabled:opacity-50 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg shadow-blue-600/25 active:scale-98"
+                  className="w-full py-3.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-50 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg shadow-amber-500/20 active:scale-98"
                 >
                   {isSubmitting ? (
                     <span>Registering Service Booking...</span>

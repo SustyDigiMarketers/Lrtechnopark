@@ -121,33 +121,33 @@ export const TechnologyVisualizer: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full rounded-3xl bg-slate-950 border border-slate-800 overflow-hidden shadow-2xl p-5 sm:p-7 flex flex-col justify-between select-none text-white">
+    <div className="relative w-full rounded-3xl bg-[#090d18] border border-slate-800 overflow-hidden shadow-2xl p-5 sm:p-7 flex flex-col justify-between select-none text-white">
       {/* Precision Background Blueprint Grid */}
       <div
-        className="absolute inset-0 opacity-[0.08] pointer-events-none"
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(to right, #38bdf8 1px, transparent 1px), linear-gradient(to bottom, #38bdf8 1px, transparent 1px)',
+            'linear-gradient(to right, #f59e0b 1px, transparent 1px), linear-gradient(to bottom, #f59e0b 1px, transparent 1px)',
           backgroundSize: '32px 32px'
         }}
       />
 
       {/* Atmospheric Glow */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-yellow-600/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header Telemetry Bar */}
       <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-4">
         <div className="flex items-center gap-3">
           <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500" />
           </span>
           <div className="flex items-center gap-2">
             <span className="text-xs font-mono font-bold tracking-wider uppercase text-slate-200">
               LR ZERO-TRUST TELEMETRY FABRIC
             </span>
-            <span className="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-950 text-blue-400 border border-blue-800">
+            <span className="hidden sm:inline-block text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/30">
               ACTIVE
             </span>
           </div>
@@ -155,9 +155,9 @@ export const TechnologyVisualizer: React.FC = () => {
 
         <div className="flex items-center gap-3 text-xs font-mono text-slate-400">
           <div className="flex items-center gap-1.5 bg-slate-900/90 px-3 py-1 rounded-full border border-slate-800">
-            <Activity className="w-3.5 h-3.5 text-blue-400" />
+            <Activity className="w-3.5 h-3.5 text-amber-400" />
             <span>
-              Bandwidth: <strong className="text-blue-300">{liveThroughput} Gbps</strong>
+              Bandwidth: <strong className="text-amber-300">{liveThroughput} Gbps</strong>
             </span>
           </div>
           <div className="hidden sm:flex items-center gap-1.5 bg-slate-900/90 px-3 py-1 rounded-full border border-slate-800">
@@ -174,8 +174,8 @@ export const TechnologyVisualizer: React.FC = () => {
         <svg className="absolute inset-0 w-full h-full pointer-events-none">
           <defs>
             <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#6366f1" stopOpacity="0.4" />
+              <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#fbbf24" stopOpacity="0.4" />
             </linearGradient>
             <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
               <feGaussianBlur stdDeviation="3" result="blur" />
@@ -234,8 +234,8 @@ export const TechnologyVisualizer: React.FC = () => {
               onClick={() => setActiveNode(node)}
               className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-2xl p-2.5 sm:p-3 transition-all duration-300 flex items-center gap-2.5 group cursor-pointer ${
                 isSelected
-                  ? 'bg-blue-600 text-white shadow-xl shadow-blue-500/40 ring-2 ring-blue-400 scale-105 z-30'
-                  : 'bg-slate-900/90 text-slate-300 border border-slate-800 hover:border-blue-500/60 hover:text-white z-20'
+                  ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 shadow-xl shadow-amber-500/30 ring-2 ring-amber-300 scale-105 z-30 font-bold'
+                  : 'bg-slate-900/90 text-slate-300 border border-slate-800 hover:border-amber-500/60 hover:text-white z-20'
               }`}
               style={{ left: `${node.x}%`, top: `${node.y}%` }}
               whileHover={{ scale: 1.08 }}
@@ -243,7 +243,7 @@ export const TechnologyVisualizer: React.FC = () => {
             >
               <div
                 className={`w-7 h-7 rounded-xl flex items-center justify-center ${
-                  isSelected ? 'bg-white/20' : 'bg-slate-800 text-blue-400 group-hover:text-white'
+                  isSelected ? 'bg-slate-950/20 text-slate-950' : 'bg-slate-800 text-amber-400 group-hover:text-white'
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -252,7 +252,7 @@ export const TechnologyVisualizer: React.FC = () => {
                 <span className="text-[11px] font-bold tracking-tight whitespace-nowrap leading-none">
                   {node.label}
                 </span>
-                <span className="text-[9px] font-mono text-slate-400 group-hover:text-slate-200 mt-1">
+                <span className={`text-[9px] font-mono mt-1 ${isSelected ? 'text-slate-900 font-semibold' : 'text-slate-400 group-hover:text-slate-200'}`}>
                   {node.metric}
                 </span>
               </div>
@@ -262,15 +262,15 @@ export const TechnologyVisualizer: React.FC = () => {
       </div>
 
       {/* Selected Node Details Card */}
-      <div className="relative z-10 bg-slate-900/95 backdrop-blur-md rounded-2xl border border-slate-800 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="relative z-10 bg-[#0d1322]/95 backdrop-blur-md rounded-2xl border border-slate-800 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-start sm:items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 shrink-0">
             <activeNode.icon className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center gap-2">
               <span className="text-sm font-bold text-white">{activeNode.label}</span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase font-semibold">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30 uppercase font-semibold">
                 {activeNode.status}
               </span>
             </div>
@@ -287,7 +287,7 @@ export const TechnologyVisualizer: React.FC = () => {
             onClick={() =>
               setActiveNode(NODES[(NODES.indexOf(activeNode) + 1) % NODES.length])
             }
-            className="text-blue-400 hover:text-blue-300 font-bold transition-colors cursor-pointer"
+            className="text-amber-400 hover:text-amber-300 font-bold transition-colors cursor-pointer"
           >
             Inspect Next &rarr;
           </button>

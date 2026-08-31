@@ -40,17 +40,17 @@ export const MagneticButton: React.FC<MagneticButtonProps> = ({
 
   const variantStyles = {
     primary:
-      'bg-[#1a56db] hover:bg-[#1545b3] text-white shadow-md hover:shadow-lg hover:shadow-blue-500/20 active:bg-blue-800',
+      'bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold shadow-lg shadow-amber-500/20 active:scale-95',
     secondary:
-      'bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 active:bg-slate-300',
+      'bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700/80 hover:border-amber-500/50 active:bg-slate-950',
     ghost:
-      'bg-transparent hover:bg-slate-100 text-slate-700 active:bg-slate-200',
+      'bg-transparent hover:bg-slate-900/80 text-slate-300 hover:text-white active:bg-slate-800',
     outline:
-      'bg-transparent border border-slate-300 hover:border-slate-800 text-slate-800 active:bg-slate-50',
+      'bg-transparent border border-slate-700 hover:border-amber-400 text-slate-200 hover:text-white active:bg-slate-900',
     dark:
-      'bg-slate-900 hover:bg-slate-800 text-white shadow-md border border-slate-800 active:bg-black',
+      'bg-slate-950 hover:bg-slate-900 text-white shadow-md border border-slate-800 hover:border-amber-500/40 active:bg-black',
     glow:
-      'bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-lg shadow-blue-500/25'
+      'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold shadow-lg shadow-amber-500/30'
   };
 
   return (

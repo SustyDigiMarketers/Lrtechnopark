@@ -19,18 +19,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onOpenAuth
 }) => {
   return (
-    <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-28 overflow-hidden bg-slate-950 text-white">
+    <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-28 overflow-hidden bg-[#07090e] text-white">
       {/* Precision Blueprint Grid & Radial Glow */}
       <div
-        className="absolute inset-0 opacity-[0.07] pointer-events-none"
+        className="absolute inset-0 opacity-[0.06] pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(to right, #38bdf8 1px, transparent 1px), linear-gradient(to bottom, #38bdf8 1px, transparent 1px)',
+            'linear-gradient(to right, #f59e0b 1px, transparent 1px), linear-gradient(to bottom, #f59e0b 1px, transparent 1px)',
           backgroundSize: '40px 40px'
         }}
       />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-600/15 blur-[160px] rounded-full pointer-events-none" />
-      <div className="absolute -bottom-20 right-0 w-[500px] h-[300px] bg-indigo-600/10 blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-amber-500/15 blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-20 right-0 w-[500px] h-[300px] bg-yellow-600/10 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -43,8 +43,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="lg:col-span-6 space-y-7 text-center lg:text-left">
             {/* Tech Tag Eyebrow */}
             <motion.div variants={staggerItemVariants}>
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-mono font-medium shadow-inner">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-400 text-xs font-mono font-medium shadow-inner">
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
                 <span className="font-bold tracking-wider">LR TECHNO PARK</span>
                 <span className="text-slate-600">&bull;</span>
                 <span className="text-slate-300">IT INFRASTRUCTURE & HARDWARE</span>
@@ -57,7 +57,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="text-4xl sm:text-6xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.08] text-white"
             >
               Technology That Keeps{' '}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-indigo-300 to-sky-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-500">
                 Your Business Moving.
               </span>
             </motion.h1>
@@ -78,16 +78,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <MagneticButton
                 variant="primary"
                 onClick={() => onNavigate('products')}
-                className="px-7 py-3.5 text-sm gap-2 font-bold shadow-xl shadow-blue-600/30"
+                className="px-7 py-3.5 text-sm gap-2 font-bold shadow-xl shadow-amber-500/20"
               >
                 <span>Explore Solutions</span>
                 <ArrowRight className="w-4 h-4" />
               </MagneticButton>
 
               <MagneticButton
-                variant="dark"
+                variant="secondary"
                 onClick={() => onNavigate('contact')}
-                className="px-6 py-3.5 text-sm gap-2 font-semibold bg-slate-900/90 border border-slate-700 hover:border-slate-500 text-white"
+                className="px-6 py-3.5 text-sm gap-2 font-semibold"
               >
                 <span>Talk to Us</span>
               </MagneticButton>
@@ -95,9 +95,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <button
                 type="button"
                 onClick={() => onNavigate('portal-dashboard')}
-                className="px-4 py-3.5 rounded-full bg-transparent hover:bg-slate-900 border border-slate-800 text-slate-400 hover:text-white text-xs font-mono transition-colors cursor-pointer flex items-center gap-1.5"
+                className="px-4 py-3.5 rounded-full bg-slate-900/60 hover:bg-slate-800 border border-slate-800 hover:border-amber-500/40 text-slate-400 hover:text-white text-xs font-mono transition-colors cursor-pointer flex items-center gap-1.5"
               >
-                <Lock className="w-3.5 h-3.5 text-blue-400" />
+                <Lock className="w-3.5 h-3.5 text-amber-400" />
                 <span>Customer Portal</span>
               </button>
             </motion.div>
@@ -112,7 +112,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <div className="text-[11px] text-slate-400 leading-tight">Uptime SLA</div>
               </div>
               <div className="space-y-0.5">
-                <div className="text-xl sm:text-2xl font-bold font-mono text-blue-400">10Gbps</div>
+                <div className="text-xl sm:text-2xl font-bold font-mono text-amber-400">10Gbps</div>
                 <div className="text-[11px] text-slate-400 leading-tight">Network Ready</div>
               </div>
               <div className="space-y-0.5">

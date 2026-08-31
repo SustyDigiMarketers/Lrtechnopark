@@ -53,7 +53,7 @@ export const ServicesShowcaseSection: React.FC<ServicesShowcaseSectionProps> = (
   onOpenContactWithService
 }) => {
   return (
-    <section className="py-24 sm:py-32 bg-white border-t border-slate-200/80 relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-[#05070a] border-t border-slate-800 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <SectionHeader
@@ -77,46 +77,46 @@ export const ServicesShowcaseSection: React.FC<ServicesShowcaseSectionProps> = (
 
             return (
               <StaggerItem key={srv.id}>
-                <div className="p-7 rounded-3xl bg-slate-50 border border-slate-200/90 hover:border-blue-500/50 hover:bg-white transition-all duration-300 flex flex-col justify-between h-full shadow-xs hover:shadow-xl group">
+                <div className="p-7 rounded-3xl bg-[#0d1322] border border-slate-800 hover:border-amber-500/50 hover:bg-[#0f172a] transition-all duration-300 flex flex-col justify-between h-full shadow-xl hover:shadow-2xl group">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1a56db] group-hover:scale-105 transition-transform shadow-xs">
+                      <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform shadow-xs">
                         <IconComponent className="w-6 h-6" />
                       </div>
-                      <TechBadge variant="slate" size="sm">
+                      <TechBadge variant="blue" size="sm">
                         {meta.tag}
                       </TechBadge>
                     </div>
 
                     <div>
-                      <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#1a56db] transition-colors leading-snug">
+                      <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors leading-snug">
                         {srv.name}
                       </h3>
-                      <p className="text-xs font-semibold text-[#1a56db] mt-1">
+                      <p className="text-xs font-semibold text-amber-400 mt-1">
                         {meta.headline}
                       </p>
                     </div>
 
-                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                    <p className="text-xs text-slate-400 leading-relaxed font-normal">
                       {meta.summary}
                     </p>
 
                     {/* Key capabilities pill list */}
-                    <div className="space-y-1.5 pt-2 border-t border-slate-200/60">
+                    <div className="space-y-1.5 pt-2 border-t border-slate-800">
                       {srv.capabilities.slice(0, 3).map((cap, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <div key={idx} className="flex items-center gap-2 text-[11px] text-slate-300 font-medium">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                           <span className="truncate">{cap}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-slate-200/60 flex flex-col gap-2">
+                  <div className="pt-6 mt-6 border-t border-slate-800 flex flex-col gap-2">
                     <button
                       type="button"
                       onClick={() => onNavigate('services', srv.slug)}
-                      className="w-full py-2.5 px-4 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-colors cursor-pointer flex items-center justify-center gap-1.5"
+                      className="w-full py-2.5 px-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20"
                     >
                       <span>Explore Service</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -124,7 +124,7 @@ export const ServicesShowcaseSection: React.FC<ServicesShowcaseSectionProps> = (
                     <button
                       type="button"
                       onClick={() => onOpenContactWithService(srv.name)}
-                      className="w-full py-2 px-4 rounded-full bg-transparent hover:bg-slate-200/60 text-slate-600 hover:text-slate-900 text-xs font-semibold transition-colors cursor-pointer text-center"
+                      className="w-full py-2 px-4 rounded-full bg-slate-900/80 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 hover:border-amber-500/40 text-xs font-semibold transition-colors cursor-pointer text-center"
                     >
                       Book Consultation
                     </button>

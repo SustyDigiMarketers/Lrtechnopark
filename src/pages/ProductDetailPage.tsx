@@ -77,13 +77,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   };
 
   return (
-    <PageTransition className="pt-32 pb-24 bg-[#fafbff] min-h-screen text-slate-800">
+    <PageTransition className="pt-32 pb-24 bg-[#07090e] min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back Navigation */}
         <button
           type="button"
           onClick={() => onNavigate('products')}
-          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-[#1a56db] mb-8 transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-amber-400 mb-8 transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Product Catalog</span>
@@ -94,8 +94,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           {/* Left Summary & Gallery (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             {/* Image Preview Box */}
-            <div className="rounded-3xl bg-white border border-slate-200/90 p-4 shadow-xs overflow-hidden">
-              <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-100 mb-3">
+            <div className="rounded-3xl bg-[#0d1322] border border-slate-800 p-4 shadow-xl overflow-hidden">
+              <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900 mb-3 border border-slate-800">
                 <img
                   src={images[selectedImageIndex] || images[0]}
                   alt={product.name}
@@ -107,7 +107,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                     {product.category}
                   </TechBadge>
                 </div>
-                <div className="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-xs text-white text-xs font-mono font-bold px-2.5 py-1 rounded-lg">
+                <div className="absolute top-3 right-3 bg-slate-950/90 backdrop-blur-xs text-amber-400 border border-amber-400/30 text-xs font-mono font-bold px-2.5 py-1 rounded-lg">
                   {product.code}
                 </div>
               </div>
@@ -121,8 +121,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                       onClick={() => setSelectedImageIndex(idx)}
                       className={`w-16 h-12 rounded-xl overflow-hidden border-2 cursor-pointer transition-all ${
                         selectedImageIndex === idx
-                          ? 'border-[#1a56db] scale-105'
-                          : 'border-transparent opacity-70 hover:opacity-100'
+                          ? 'border-amber-400 scale-105'
+                          : 'border-transparent opacity-60 hover:opacity-100'
                       }`}
                     >
                       <img src={img} alt="thumbnail" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
@@ -144,61 +144,61 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               </TechBadge>
             </div>
 
-            <div className="text-xs font-bold text-blue-600 uppercase tracking-widest">
+            <div className="text-xs font-bold text-amber-400 uppercase tracking-widest">
               {product.brand}
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
               {product.name}
             </h1>
 
             {product.tagline && (
-              <p className="text-sm font-semibold text-slate-700">
+              <p className="text-sm font-semibold text-amber-400/90">
                 {product.tagline}
               </p>
             )}
 
-            <p className="text-base text-slate-600 leading-relaxed font-normal">
+            <p className="text-base text-slate-300 leading-relaxed font-normal">
               {product.description}
             </p>
 
             {/* Quick Specs Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs shadow-xs">
+              <div className="p-4 rounded-2xl bg-[#0d1322] border border-slate-800 text-xs shadow-xs">
                 <div className="text-slate-400 font-mono text-[10px] uppercase">
                   Category
                 </div>
-                <div className="font-bold text-slate-900 mt-1">{product.category}</div>
+                <div className="font-bold text-white mt-1">{product.category}</div>
               </div>
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs shadow-xs">
+              <div className="p-4 rounded-2xl bg-[#0d1322] border border-slate-800 text-xs shadow-xs">
                 <div className="text-slate-400 font-mono text-[10px] uppercase">
                   Warranty Support
                 </div>
-                <div className="font-bold text-slate-900 mt-1 line-clamp-1">{product.warranty || '3-Year On-Site'}</div>
+                <div className="font-bold text-white mt-1 line-clamp-1">{product.warranty || '3-Year On-Site'}</div>
               </div>
-              <div className="p-4 rounded-2xl bg-white border border-slate-200 text-xs shadow-xs">
+              <div className="p-4 rounded-2xl bg-[#0d1322] border border-slate-800 text-xs shadow-xs">
                 <div className="text-slate-400 font-mono text-[10px] uppercase">
                   Tax / GST Status
                 </div>
-                <div className="font-bold text-[#1a56db] mt-1">GST e-Invoice Ready (18%)</div>
+                <div className="font-bold text-amber-400 mt-1">GST e-Invoice Ready (18%)</div>
               </div>
             </div>
           </div>
 
           {/* Right Live Order Configuration Card (5 cols) */}
-          <div className="lg:col-span-5 p-7 rounded-3xl bg-white border border-slate-200/90 shadow-xl space-y-6">
-            <div className="border-b border-slate-100 pb-4">
+          <div className="lg:col-span-5 p-7 rounded-3xl bg-[#0d1322] border border-slate-800 shadow-2xl space-y-6">
+            <div className="border-b border-slate-800 pb-4">
               <TechBadge variant="blue" size="sm">
                 PROCUREMENT CONFIGURATOR
               </TechBadge>
-              <h3 className="text-xl font-bold text-slate-900 mt-2">
+              <h3 className="text-xl font-bold text-white mt-2">
                 Order Hardware & Deployment
               </h3>
             </div>
 
             {/* Delivery / Deployment Tier */}
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-2">
+              <label className="block text-xs font-bold text-slate-300 mb-2">
                 Fulfillment & Commissioning Tier
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -213,8 +213,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                     onClick={() => setSelectedDelivery(dep.id)}
                     className={`p-2.5 rounded-xl border text-xs font-bold transition-all cursor-pointer text-center ${
                       selectedDelivery === dep.id
-                        ? 'bg-blue-50 text-[#1a56db] border-[#1a56db]'
-                        : 'bg-white text-slate-600 border-slate-200 hover:text-slate-900'
+                        ? 'bg-amber-400/10 text-amber-300 border-amber-400/50'
+                        : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
                     }`}
                   >
                     {dep.label}
@@ -225,15 +225,15 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
             {/* Quantity Stepper */}
             <div>
-              <div className="flex justify-between text-xs font-bold text-slate-700 mb-2">
+              <div className="flex justify-between text-xs font-bold text-slate-300 mb-2">
                 <span>Quantity ({product.unit || 'Units'}):</span>
-                <span className="font-mono text-[#1a56db] text-sm">{quantity} {product.unit || 'Units'}</span>
+                <span className="font-mono text-amber-400 text-sm">{quantity} {product.unit || 'Units'}</span>
               </div>
               <div className="flex items-center gap-3">
                 <button
                   type="button"
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-base flex items-center justify-center cursor-pointer transition-colors"
+                  className="w-10 h-10 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold text-base flex items-center justify-center cursor-pointer transition-colors"
                 >
                   -
                 </button>
@@ -243,50 +243,50 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   max="500"
                   value={quantity}
                   onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                  className="flex-1 text-center font-mono font-bold text-sm bg-slate-50 border border-slate-200 rounded-xl py-2 text-slate-900 focus:outline-none focus:border-[#1a56db]"
+                  className="flex-1 text-center font-mono font-bold text-sm bg-slate-900 border border-slate-700 rounded-xl py-2 text-white focus:outline-none focus:border-amber-500"
                 />
                 <button
                   type="button"
                   onClick={() => setQuantity(quantity + 1)}
-                  className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-base flex items-center justify-center cursor-pointer transition-colors"
+                  className="w-10 h-10 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold text-base flex items-center justify-center cursor-pointer transition-colors"
                 >
                   +
                 </button>
               </div>
               {product.discountPrice && quantity < 5 && (
-                <div className="text-[11px] text-slate-500 mt-1.5">
+                <div className="text-[11px] text-slate-400 mt-1.5">
                   Order 5+ units for bulk pricing (₹{product.discountPrice.toLocaleString('en-IN')}/unit)
                 </div>
               )}
             </div>
 
             {/* Total Price Display */}
-            <div className="p-4.5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+            <div className="p-4.5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-[11px] font-mono text-slate-500 uppercase">
+                  <div className="text-[11px] font-mono text-slate-400 uppercase">
                     Base Subtotal ({quantity} {product.unit || 'Units'})
                   </div>
-                  <div className="text-xl font-bold font-mono text-slate-900">
+                  <div className="text-xl font-bold font-mono text-white">
                     ₹{subtotal.toLocaleString('en-IN')}
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-[11px] font-mono text-slate-500 uppercase">
+                  <div className="text-[11px] font-mono text-slate-400 uppercase">
                     GST (18%)
                   </div>
-                  <div className="text-sm font-bold font-mono text-slate-700">
+                  <div className="text-sm font-bold font-mono text-slate-300">
                     + ₹{estimatedGst.toLocaleString('en-IN')}
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-slate-200 flex items-center justify-between">
+              <div className="pt-2 border-t border-slate-800 flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] font-bold text-slate-500 uppercase">
+                  <div className="text-[10px] font-bold text-slate-400 uppercase">
                     Grand Total (Incl. GST)
                   </div>
-                  <div className="text-2xl font-black font-mono text-[#1a56db]">
+                  <div className="text-2xl font-black font-mono text-amber-400">
                     ₹{estimatedTotal.toLocaleString('en-IN')}
                   </div>
                 </div>
@@ -301,7 +301,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <button
                 type="button"
                 onClick={handleOrderNow}
-                className="w-full py-4 rounded-full bg-[#1a56db] hover:bg-[#1545b3] text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg shadow-blue-600/25 active:scale-98"
+                className="w-full py-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-lg shadow-amber-500/20 active:scale-98"
               >
                 <span>Proceed to Order in Customer Portal</span>
                 <ArrowRight className="w-4 h-4" />
@@ -312,11 +312,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
         {/* Detailed Hardware Features */}
         <div className="space-y-8 mb-16">
-          <div className="border-b border-slate-200 pb-4">
-            <h2 className="text-2xl font-black text-slate-900">
+          <div className="border-b border-slate-800 pb-4">
+            <h2 className="text-2xl font-black text-white">
               Hardware Capabilities & Enterprise Features
             </h2>
-            <p className="text-xs text-slate-600 mt-1">
+            <p className="text-xs text-slate-400 mt-1">
               Field-tested enterprise hardware engineered for mission-critical reliability.
             </p>
           </div>
@@ -325,15 +325,15 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             {product.features.map((feat, idx) => (
               <div
                 key={idx}
-                className="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-lg transition-all space-y-3"
+                className="p-7 rounded-3xl bg-[#0d1322] border border-slate-800 hover:border-amber-500/50 shadow-xl hover:shadow-2xl transition-all space-y-3"
               >
-                <div className="w-8 h-8 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1a56db] text-xs font-bold font-mono">
+                <div className="w-8 h-8 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 text-xs font-bold font-mono">
                   0{idx + 1}
                 </div>
-                <h3 className="text-base font-bold text-slate-900">{feat.title}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{feat.description}</p>
+                <h3 className="text-base font-bold text-white">{feat.title}</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">{feat.description}</p>
                 {feat.metricHighlight && (
-                  <div className="pt-2 text-xs font-mono font-semibold text-emerald-600">
+                  <div className="pt-2 text-xs font-mono font-semibold text-amber-400">
                     {feat.metricHighlight}
                   </div>
                 )}
@@ -343,46 +343,46 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
         </div>
 
         {/* Technical Specifications & Compliance */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-xs">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 sm:p-10 rounded-3xl bg-[#0d1322] border border-slate-800 shadow-xl">
           <div className="space-y-3">
-            <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-              <Server className="w-4 h-4 text-[#1a56db]" />
+            <h3 className="text-base font-bold text-white flex items-center gap-2">
+              <Server className="w-4 h-4 text-amber-400" />
               <span>Complete Hardware Specifications</span>
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-600">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-400">
               {product.specs.map((spec, i) => (
                 <div
                   key={i}
-                  className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 space-y-0.5"
+                  className="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-0.5"
                 >
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">
+                  <div className="text-[10px] font-mono text-slate-500 uppercase">
                     {spec.label}
                   </div>
-                  <div className="text-xs font-bold text-slate-800">{spec.value}</div>
+                  <div className="text-xs font-bold text-slate-200">{spec.value}</div>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <h3 className="text-base font-bold text-white flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-amber-400" />
               <span>Warranty, Quality Assurance & GST Invoicing</span>
             </h3>
-            <p className="text-xs text-slate-600 leading-relaxed font-normal">
+            <p className="text-xs text-slate-400 leading-relaxed font-normal">
               Every hardware unit shipped by LR Techno Park undergoes thorough diagnostic burn-in testing before dispatch. Backed by direct manufacturer warranty with on-site technician support and genuine replacement components.
             </p>
             <div className="space-y-2 pt-2 text-xs">
-              <div className="flex items-center gap-2 text-slate-700">
-                <Check className="w-4 h-4 text-emerald-600" />
+              <div className="flex items-center gap-2 text-slate-300">
+                <Check className="w-4 h-4 text-amber-400" />
                 <span>GST Tax Invoice with Input Tax Credit (ITC) eligibility</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-700">
-                <Check className="w-4 h-4 text-emerald-600" />
+              <div className="flex items-center gap-2 text-slate-300">
+                <Check className="w-4 h-4 text-amber-400" />
                 <span>{product.warranty || '3-Year On-Site Comprehensive Hardware Support'}</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-700">
-                <Check className="w-4 h-4 text-emerald-600" />
+              <div className="flex items-center gap-2 text-slate-300">
+                <Check className="w-4 h-4 text-amber-400" />
                 <span>Same-day dispatch for in-stock enterprise hardware</span>
               </div>
             </div>

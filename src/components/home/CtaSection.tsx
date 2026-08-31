@@ -14,17 +14,17 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
   onOpenAuth
 }) => {
   return (
-    <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-[#07090e] relative overflow-hidden border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedReveal variant="scale">
-          <div className="rounded-3xl bg-slate-950 text-white p-8 sm:p-12 lg:p-16 border border-slate-800 shadow-2xl relative overflow-hidden">
+          <div className="rounded-3xl bg-[#0d1322] text-white p-8 sm:p-12 lg:p-16 border border-slate-800 shadow-2xl relative overflow-hidden">
             {/* Ambient Lighting */}
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-indigo-600/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-yellow-600/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
               <div className="lg:col-span-8 space-y-4 text-center lg:text-left">
-                <TechBadge variant="dark" size="md" dot>
+                <TechBadge variant="blue" size="md" dot>
                   READY TO START?
                 </TechBadge>
 
@@ -41,18 +41,18 @@ export const CtaSection: React.FC<CtaSectionProps> = ({
                 <MagneticButton
                   variant="primary"
                   onClick={() => onNavigate('contact')}
-                  className="w-full py-3.5 px-6 text-sm font-bold gap-2 shadow-xl shadow-blue-600/30"
+                  className="w-full py-3.5 px-6 text-sm font-bold gap-2 shadow-xl shadow-amber-500/20"
                 >
-                  <Headphones className="w-4 h-4 text-white" />
+                  <Headphones className="w-4 h-4 text-slate-950" />
                   <span>Talk to Us</span>
                 </MagneticButton>
 
                 <MagneticButton
-                  variant="dark"
+                  variant="secondary"
                   onClick={() => onOpenAuth('login')}
-                  className="w-full py-3.5 px-6 text-sm font-semibold bg-slate-900 border border-slate-700 hover:border-slate-500 gap-2 text-white"
+                  className="w-full py-3.5 px-6 text-sm font-semibold gap-2"
                 >
-                  <Lock className="w-4 h-4 text-blue-400" />
+                  <Lock className="w-4 h-4 text-amber-400" />
                   <span>Access Customer Portal</span>
                 </MagneticButton>
               </div>

@@ -23,7 +23,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   onQuickOrder
 }) => {
   return (
-    <PageTransition className="space-y-0 bg-white">
+    <PageTransition className="space-y-0 bg-[#07090e]">
       {/* 1. Futuristic Enterprise Hero with Interactive Mesh Visualizer */}
       <HeroSection
         onNavigate={onNavigate}

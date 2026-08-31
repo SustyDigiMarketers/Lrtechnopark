@@ -76,10 +76,10 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
   };
 
   return (
-    <PageTransition className="pt-32 pb-24 bg-[#fafbff] min-h-screen text-slate-800">
+    <PageTransition className="pt-32 pb-24 bg-[#07090e] min-h-screen text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-slate-800">
           <SectionHeader
             indexTag="[ LEDGER // 2026 ]"
             badge="ENTERPRISE PROCUREMENT"
@@ -93,7 +93,7 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
             <button
               type="button"
               onClick={() => onNavigate('portal-order-new')}
-              className="py-3.5 px-6 rounded-full bg-[#1a56db] hover:bg-[#1545b3] text-white text-xs font-bold flex items-center gap-2 shadow-md shadow-blue-600/20 transition-all cursor-pointer active:scale-98"
+              className="py-3.5 px-6 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs font-bold flex items-center gap-2 shadow-md shadow-amber-500/20 transition-all cursor-pointer active:scale-98"
             >
               <PlusCircle className="w-4 h-4" />
               <span>Configure New Order</span>
@@ -118,8 +118,8 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
                 onClick={() => setStatusFilter(status)}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-bold uppercase transition-colors cursor-pointer ${
                   statusFilter === status
-                    ? 'bg-[#1a56db] text-white shadow-xs'
-                    : 'bg-white hover:bg-slate-100 text-slate-600 border border-slate-200'
+                    ? 'bg-amber-400 text-slate-950 shadow-xs'
+                    : 'bg-slate-900 hover:bg-slate-800 text-slate-400 border border-slate-800'
                 }`}
               >
                 {status.replace('_', ' ')}
@@ -134,24 +134,24 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Filter by Order ID, PO, Product..."
-              className="w-full bg-white border border-slate-200 rounded-full pl-10 pr-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#1a56db]"
+              className="w-full bg-[#0d1322] border border-slate-800 rounded-full pl-10 pr-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
             />
           </div>
         </div>
 
         {/* Orders Table Container */}
-        <div className="rounded-3xl bg-white border border-slate-200/90 overflow-hidden shadow-xs">
+        <div className="rounded-3xl bg-[#0d1322] border border-slate-800 overflow-hidden shadow-xl">
           {filteredOrders.length === 0 ? (
             <div className="py-20 text-center space-y-3">
-              <Package className="w-12 h-12 text-slate-400 mx-auto" />
-              <h3 className="text-base font-bold text-slate-900">No Orders Found</h3>
-              <p className="text-xs text-slate-500 max-w-sm mx-auto">
+              <Package className="w-12 h-12 text-slate-500 mx-auto" />
+              <h3 className="text-base font-bold text-white">No Orders Found</h3>
+              <p className="text-xs text-slate-400 max-w-sm mx-auto">
                 No orders match your filter criteria. Create your first enterprise hardware order using our guided wizard.
               </p>
               <button
                 type="button"
                 onClick={() => onNavigate('portal-order-new')}
-                className="mt-2 px-5 py-2.5 rounded-full bg-[#1a56db] text-white text-xs font-semibold cursor-pointer shadow-md shadow-blue-600/20"
+                className="mt-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 text-xs font-bold cursor-pointer shadow-md shadow-amber-500/20"
               >
                 Configure New Order
               </button>
@@ -159,7 +159,7 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
-                <thead className="bg-slate-50 text-slate-500 font-mono font-bold uppercase tracking-wider border-b border-slate-200">
+                <thead className="bg-slate-900/90 text-slate-400 font-mono font-bold uppercase tracking-wider border-b border-slate-800">
                   <tr>
                     <th className="py-4 px-6">Order Reference</th>
                     <th className="py-4 px-6">Hardware & Model</th>
@@ -169,21 +169,21 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
                     <th className="py-4 px-6 text-right">Actions</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-100 font-sans">
+                <tbody className="divide-y divide-slate-800 font-sans">
                   {filteredOrders.map((order) => (
                     <tr
                       key={order.id}
-                      className="hover:bg-slate-50/70 transition-colors"
+                      className="hover:bg-slate-900/60 transition-colors"
                     >
                       {/* Order Reference */}
                       <td className="py-4 px-6">
-                        <div className="font-mono font-bold text-slate-900 text-sm">
+                        <div className="font-mono font-bold text-white text-sm">
                           {order.id}
                         </div>
-                        <div className="text-[11px] text-slate-500 mt-0.5 font-mono">
+                        <div className="text-[11px] text-slate-400 mt-0.5 font-mono">
                           {new Date(order.createdAt).toLocaleDateString()}
                         </div>
-                        <div className="text-[10px] font-medium text-emerald-600 flex items-center gap-1 mt-1">
+                        <div className="text-[10px] font-medium text-emerald-400 flex items-center gap-1 mt-1">
                           <ShieldCheck className="w-3 h-3" />
                           <span>Verified & Synced</span>
                         </div>
@@ -191,12 +191,12 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
 
                       {/* Products & Config */}
                       <td className="py-4 px-6">
-                        <div className="font-bold text-slate-900">
+                        <div className="font-bold text-white">
                           {order.items[0]?.productName || 'LR Enterprise Hardware'}
                         </div>
-                        <div className="text-[11px] text-slate-500 mt-0.5">
+                        <div className="text-[11px] text-slate-400 mt-0.5">
                           Code:{' '}
-                          <span className="font-mono text-[#1a56db] font-semibold">
+                          <span className="font-mono text-amber-400 font-semibold">
                             {order.items[0]?.productCode}
                           </span>{' '}
                           &bull; {order.items[0]?.category || 'Hardware'}
@@ -210,10 +210,10 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
 
                       {/* Company / PO */}
                       <td className="py-4 px-6">
-                        <div className="font-bold text-slate-900">
+                        <div className="font-bold text-white">
                           {order.companyName}
                         </div>
-                        <div className="text-[11px] text-slate-500">
+                        <div className="text-[11px] text-slate-400">
                           {order.customerEmail}
                         </div>
                         <div className="text-[10px] text-slate-400 mt-0.5 font-mono">
@@ -223,7 +223,7 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
 
                       {/* Total Amount */}
                       <td className="py-4 px-6">
-                        <div className="font-mono font-black text-sm text-slate-900">
+                        <div className="font-mono font-black text-sm text-amber-400">
                           ₹{order.total?.toLocaleString('en-IN')}
                         </div>
                         <div className="text-[10px] text-slate-400 font-mono">
@@ -252,7 +252,7 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
                         <button
                           type="button"
                           onClick={() => onOpenTracker(order.id)}
-                          className="px-3.5 py-1.5 rounded-full bg-blue-50 hover:bg-blue-100 border border-blue-100 text-[#1a56db] text-xs font-bold transition-colors cursor-pointer inline-flex items-center gap-1.5"
+                          className="px-3.5 py-1.5 rounded-full bg-amber-400/10 hover:bg-amber-400/20 border border-amber-400/30 text-amber-400 text-xs font-bold transition-colors cursor-pointer inline-flex items-center gap-1.5"
                           title="View live fulfillment timeline"
                         >
                           <Search className="w-3 h-3" />
@@ -262,7 +262,7 @@ export const OrdersManagementPage: React.FC<OrdersManagementPageProps> = ({
                         <button
                           type="button"
                           onClick={() => handlePrintReceipt(order)}
-                          className="px-3 py-1.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 transition-colors cursor-pointer inline-flex items-center gap-1 font-semibold"
+                          className="px-3 py-1.5 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700 transition-colors cursor-pointer inline-flex items-center gap-1 font-semibold"
                           title="View & Print GST Tax Invoice"
                         >
                           <Printer className="w-3.5 h-3.5" />
